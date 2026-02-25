@@ -1,0 +1,15 @@
+{
+    "key": "group_product_mobistock",
+    "title": "Product extra",
+    "fields": [
+        {"key": "field_product_badge", "label": "Badge", "name": "product_badge", "type": "text", "placeholder": "Bijv. Nieuw, Sale"},
+        {"key": "field_product_subtitle", "label": "Subtitle", "name": "product_subtitle", "type": "text"},
+        {"key": "field_product_keurmerk", "label": "Keurmerk Refurbished tonen", "name": "product_keurmerk_refurbished", "type": "true_false", "default_value": 1, "ui": 1},
+        {"key": "field_product_about", "label": "Over-tekst (overschrijft beschrijving)", "name": "product_about_text", "type": "wysiwyg"},
+        {"key": "field_product_specs", "label": "Technische specificaties", "name": "product_specs", "type": "repeater", "layout": "table", "button_label": "Specificatie toevoegen", "sub_fields": [{"key": "field_product_spec_label", "label": "Label", "name": "label", "type": "text"}, {"key": "field_product_spec_value", "label": "Waarde", "name": "value", "type": "text"}]}
+    ],
+    "location": [[{"param": "post_type", "operator": "==", "value": "product"}]],
+    "menu_order": 0,
+    "position": "normal",
+    "modified": 1739870000
+}

@@ -1,0 +1,90 @@
+/**
+ * Home features – 4 benefit cards op donkere achtergrond
+ */
+
+.home-features {
+	margin-left: 0;
+	margin-right: 0;
+	padding: 2em 0 2.5em;
+
+	@media (min-width: 48em) {
+		margin-left: calc(-1 * $spacing__page-horizontal);
+		margin-right: calc(-1 * $spacing__page-horizontal);
+		padding: 2.5em $spacing__page-horizontal 3em;
+	}
+}
+
+.home-features__header {
+	margin-bottom: 2em;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 36em;
+	text-align: center;
+}
+
+.home-features__title {
+	margin: 0 0 0.5em;
+	font-family: $font__heading;
+	font-size: 1.75rem;
+	font-weight: 700;
+	color: $color__black;
+
+	@media (min-width: 48em) {
+		font-size: 2rem;
+	}
+}
+
+.home-features__subtitle {
+	margin: 0;
+	font-size: 1rem;
+	line-height: 1.6;
+	color: $color__black;
+	opacity: 0.9;
+}
+
+.home-features__inner {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1.25em;
+	margin: 0 auto;
+
+	@media (min-width: 30em) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media (min-width: 64em) {
+		grid-template-columns: repeat(4, 1fr);
+		gap: 1.5em;
+	}
+}
+
+.home-feature {
+	background: $color__offwhite;
+	border-radius: 16px;
+	padding: 1.75em;
+}
+
+.home-feature__icon {
+	color: $color__text-main;
+	margin-bottom: 1em;
+
+	svg {
+		display: block;
+	}
+}
+
+.home-feature__title {
+	margin: 0 0 0.5em;
+	font-family: $font__heading;
+	font-size: 1.15rem;
+	font-weight: 700;
+	color: $color__text-main;
+}
+
+.home-feature__text {
+	margin: 0;
+	font-size: 0.9rem;
+	line-height: 1.5;
+	color: $color__text-main;
+	opacity: 0.9;
+}

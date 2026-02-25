@@ -1,0 +1,30 @@
+/* Mobistock design tokens */
+
+$color__black: #120E17;
+$color__offwhite: #F2F3F7;
+$color__white: #FFFFFF;
+$color__dark-blue: #3A28CC;
+$color__light-blue: #4BC9F1;
+$color__light-green: #8AEA92;
+$color__beige: #FFFAE5;
+
+$color__background-body: $color__white;
+$color__background-screen: $color__offwhite;
+$color__background-hr: $color__offwhite;
+$color__background-button: $color__dark-blue;
+$color__background-pre: $color__offwhite;
+$color__background-ins: $color__beige;
+
+$color__text-screen: $color__dark-blue;
+$color__text-input: $color__black;
+$color__text-input-focus: $color__black;
+$color__link: $color__dark-blue;
+$color__link-visited: $color__dark-blue;
+$color__link-hover: $color__light-blue;
+$color__text-main: $color__black;
+
+$color__border-button: $color__dark-blue;
+$color__border-button-hover: $color__light-blue;
+$color__border-button-focus: $color__light-blue;
+$color__border-input: $color__offwhite;
+$color__border-abbr: $color__black;

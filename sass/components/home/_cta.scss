@@ -1,0 +1,40 @@
+.home-cta {
+	padding: 2em 0;
+	text-align: center;
+	background: $color__offwhite;
+	border-radius: 15px;
+}
+
+.home-cta__inner {
+	max-width: 36em;
+	margin: 0 auto;
+}
+
+.home-cta__title {
+	margin: 0 0 0.5em;
+	font-family: $font__heading;
+	font-size: 1.75rem;
+	font-weight: 700;
+	color: $color__text-main;
+}
+
+.home-cta__text {
+	margin: 0 0 1em;
+	line-height: 1.6;
+	color: $color__text-main;
+}
+
+.home-cta__btn {
+	display: inline-block;
+	padding: 0.65em 1.5em;
+	background: $color__dark-blue;
+	color: $color__white;
+	border-radius: 999px;
+	font-family: $font__heading;
+	font-weight: 500;
+	text-decoration: none;
+
+	&:hover {
+		background: darken($color__dark-blue, 5%);
+	}
+}

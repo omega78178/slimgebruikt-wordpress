@@ -1,0 +1,20 @@
+/**
+ * Home WYSIWYG – vrije content blok uit ACF
+ */
+
+.home-wysiwyg {
+	padding: 2em 0;
+}
+
+.home-wysiwyg__inner {
+	max-width: 700px;
+	margin: 0 auto;
+
+	p:first-child {
+		margin-top: 0;
+	}
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+}

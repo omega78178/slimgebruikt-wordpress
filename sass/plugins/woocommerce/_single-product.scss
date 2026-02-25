@@ -1,0 +1,621 @@
+/**
+ * Single product page – SlimGebruikt design
+ */
+
+.single-product .site-main {
+	padding: 0 $spacing__page-horizontal 2em;
+}
+
+.product-detail {
+	.product-detail__top {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1.5em;
+		margin-bottom: 2.5em;
+
+		@media (min-width: $breakpoint-tablet) {
+			grid-template-columns: 1fr 1fr;
+			gap: 2em;
+		}
+	}
+
+	.product-detail__gallery {
+		position: relative;
+
+		.woocommerce-product-gallery {
+			float: none;
+		}
+	}
+
+	.product-detail__header {
+		margin-bottom: 0.5em;
+	}
+
+	.product-detail__summary.entry-summary {
+		margin-top: 0;
+	}
+
+	.product-detail__summary {
+		background: $color__white;
+		padding: 1.5em;
+		border-radius: 15px;
+		color: $color__black;
+		border: 1px solid $color__offwhite;
+
+		.woocommerce-product-details__short-description {
+			margin-bottom: 1em;
+			color: $color__black;
+		}
+
+		.entry-title,
+		.product-subtitle,
+		.stock { color: $color__black; }
+		.product-subtitle { opacity: 0.85; }
+	}
+
+	.product-detail__delivery {
+		margin: 1em 0;
+		padding: 1em;
+		background: rgba(255, 255, 255, 0.08);
+		border-radius: 10px;
+		font-size: 0.9rem;
+		color: $color__black;
+
+		p { margin: 0.25em 0; }
+	}
+
+	.product-detail__pay {
+		margin: 0.5em 0 0;
+		font-size: 0.85rem;
+
+		a { color: $color__light-blue; }
+		small { opacity: 0.75; color: $color__text-main; }
+	}
+
+	.product-detail__retour {
+		margin: 1.25em 0;
+		padding: 1.25em;
+		background: #e8e9eb;
+		border-radius: 12px;
+		border: 1px solid rgba(0, 0, 0, 0.08);
+		color: $color__text-main;
+	}
+
+	.product-detail__retour-title {
+		margin: 0 0 0.75em;
+		font-size: 1rem;
+		font-weight: 600;
+		font-family: $font__heading;
+		color: $color__text-main;
+	}
+
+	.product-detail__retour-list {
+		margin: 0;
+		padding-left: 1.25em;
+		font-size: 0.9rem;
+		line-height: 1.5;
+
+		li {
+			margin-bottom: 0.5em;
+			position: relative;
+			padding-left: 0.5em;
+
+			&::marker { color: $color__light-green; }
+		}
+	}
+
+	.product-detail__guarantee {
+		display: flex;
+		align-items: center;
+		gap: 0.5em;
+		margin: 1em 0 0;
+		font-size: 0.9rem;
+		color: $color__text-main;
+
+		svg { flex-shrink: 0; color: $color__light-blue; }
+	}
+
+	.entry-title {
+		font-size: clamp(1.5rem, 4vw, 2.5rem);
+		margin: 0;
+	}
+
+	.product-config-summary {
+		display: block;
+		font-size: 1rem;
+		color: $color__text-main;
+		opacity: 0.85;
+		margin-top: 0.25em;
+	}
+
+	.product-subtitle {
+		display: block;
+		font-size: 1rem;
+		color: $color__text-main;
+		opacity: 0.85;
+		margin-bottom: 0.75em;
+	}
+
+	.price {
+		font-size: 1.75rem;
+		font-weight: 700;
+		margin-bottom: 1em;
+		color: $color__light-blue;
+
+		.woocommerce-Price-amount { font-family: $font__heading; color: inherit; }
+	}
+
+	.single_add_to_cart_button {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5em;
+		width: 100%;
+		padding: 1em 1.5em;
+		background: $color__dark-blue !important;
+		color: $color__white !important;
+		font-size: 1.1rem;
+		font-family: $font__heading;
+		font-weight: 500;
+		border: none;
+		border-radius: 12px;
+		cursor: pointer;
+		box-shadow: none;
+
+		&::before {
+			content: "";
+			width: 20px;
+			height: 20px;
+			background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2'%3E%3Cpath d='M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z'/%3E%3Cline x1='3' y1='6' x2='21' y2='6'/%3E%3Cpath d='M16 10a4 4 0 0 1-8 0'/%3E%3C/svg%3E") no-repeat center;
+		}
+
+		&:hover {
+			background: darken($color__dark-blue, 8%) !important;
+			color: $color__white !important;
+		}
+	}
+}
+
+.product-about {
+	margin: 2.5em 0;
+	padding: 2em 0;
+	border-top: 1px solid $color__border-input;
+
+	.product-about__title {
+		font-size: clamp(1.25rem, 3vw, 1.75rem);
+		margin-bottom: 1.25em;
+	}
+
+	.product-about__inner {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1.5em;
+
+		@media (min-width: $breakpoint-tablet) {
+			grid-template-columns: 200px 1fr;
+			align-items: start;
+		}
+	}
+
+	.product-about__image {
+		img {
+			border-radius: 10px;
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	.product-about__content {
+		p { margin-bottom: 1em; }
+	}
+
+	.product-about__bullets {
+		margin: 1em 0 0;
+		padding-left: 1.25em;
+		list-style: none;
+
+		li {
+			position: relative;
+			padding-left: 1.5em;
+			margin-bottom: 0.5em;
+
+			&::before {
+				content: "✓";
+				position: absolute;
+				left: 0;
+				color: $color__light-green;
+				font-weight: 700;
+			}
+		}
+	}
+}
+
+.product-specs {
+	margin: 2em 0;
+	padding: 2em 0;
+	border-top: 1px solid $color__border-input;
+
+	.product-specs__title {
+		font-size: clamp(1.25rem, 3vw, 1.75rem);
+		margin-bottom: 1em;
+	}
+
+	.product-specs__list {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 0.5em 1.5em;
+		margin: 0;
+
+		@media (min-width: $breakpoint-mobile) {
+			grid-template-columns: auto 1fr;
+			max-width: 400px;
+		}
+
+		dt {
+			font-weight: 600;
+			color: $color__text-main;
+			opacity: 0.85;
+		}
+		dd { margin: 0; }
+	}
+}
+
+.product-vaak-bekeken {
+	margin-top: 2.5em;
+	padding-top: 2em;
+	border-top: 1px solid $color__border-input;
+
+	.related.products {
+		> h2 {
+			font-size: clamp(1.25rem, 3vw, 1.5rem);
+			margin-bottom: 1em;
+		}
+
+		ul.products {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 1em;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			@media (min-width: $breakpoint-tablet) {
+				grid-template-columns: repeat(4, 1fr);
+				gap: 1.25em;
+			}
+		}
+	}
+}
+
+/* Product gallery – SlimGebruikt design */
+.product-gallery-wrap {
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+}
+
+.product-gallery-card {
+	position: relative;
+	background: $color__offwhite;
+	border-radius: 15px;
+	padding: 2em;
+	margin-bottom: 0;
+
+	.woocommerce-product-gallery {
+		position: relative;
+		z-index: 1;
+	}
+
+	.woocommerce-product-gallery__wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+	}
+
+	.flex-viewport {
+		border-radius: 10px;
+		overflow: hidden;
+	}
+}
+
+.product-gallery__tag--garantie {
+	position: absolute;
+	top: 1em;
+	left: 1em;
+	z-index: 2;
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4em;
+	padding: 0.5em 0.9em;
+	background: $color__light-blue;
+	color: $color__white;
+	font-size: 0.85rem;
+	font-family: $font__heading;
+	font-weight: 500;
+	border-radius: 999px;
+
+	svg { flex-shrink: 0; }
+}
+
+.product-gallery__refurbished {
+	position: absolute;
+	bottom: 1em;
+	left: 1em;
+	z-index: 2;
+	padding: 0.75em 1em;
+	background: $color__white;
+	border-radius: 10px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.product-gallery__brand {
+	font-family: $font__heading;
+	font-size: 0.95rem;
+	font-weight: 600;
+
+	&--slim { color: $color__dark-blue; }
+	&--gebruikt { color: $color__light-blue; }
+}
+
+.product-gallery__refurbished-text {
+	margin: 0.25em 0 0.4em;
+	font-size: 0.8rem;
+	color: $color__text-main;
+	opacity: 0.9;
+}
+
+.product-gallery__stars {
+	display: flex;
+	gap: 0.15em;
+	font-size: 0.9rem;
+}
+
+.product-gallery__star {
+	color: #ddd;
+
+	&--filled { color: $color__light-green; }
+}
+
+.product-gallery__trustmarks {
+	position: absolute;
+	bottom: 1em;
+	right: 1em;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+	align-items: flex-end;
+}
+
+.product-gallery__trustmark {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4em;
+	padding: 0.4em 0.6em;
+	background: $color__white;
+	border-radius: 6px;
+	font-size: 0.65rem;
+	font-weight: 600;
+	color: #c00;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+
+	svg {
+		flex-shrink: 0;
+		color: $color__light-green;
+	}
+}
+
+/* Thumbnails – dark background */
+.product-gallery-card .flex-control-thumbs {
+	margin: 0;
+	padding: 1em 0 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+	background: $color__black;
+	border-radius: 0 0 15px 15px;
+	margin: 0 -2em -2em;
+	padding: 1em 2em 2em;
+	list-style: none;
+
+	li {
+		cursor: pointer;
+		width: 70px;
+		height: 70px;
+		border: 2px solid rgba(255, 255, 255, 0.5);
+		border-radius: 8px;
+		overflow: hidden;
+		transition: border-color 0.2s;
+
+		&:hover,
+		& img.flex-active {
+			border-color: $color__white;
+		}
+	}
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		opacity: 0.6;
+
+		&.flex-active { opacity: 1; }
+	}
+}
+
+/* FlexSlider prev/next – light blue circles */
+.product-gallery-card .flex-direction-nav a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+	background: $color__light-blue !important;
+	color: $color__white !important;
+	border-radius: 50%;
+	opacity: 1;
+
+	&:hover {
+		background: $color__dark-blue !important;
+	}
+
+	&::before {
+		font-size: 18px;
+	}
+}
+
+/* Legacy gallery styling (float fix) */
+.single-product div.product {
+	position: relative;
+
+	.woocommerce-product-gallery {
+		position: relative;
+
+		.woocommerce-product-gallery__trigger {
+			position: absolute;
+			top: 1em;
+			right: 1em;
+			z-index: 99;
+		}
+
+		.flex-viewport { margin-bottom: 0; }
+	}
+}
+
+/* Product configuratie – design 1:1 */
+.product-config {
+	.product-config__options {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+		margin-bottom: 1.25em;
+	}
+
+	// .product-config__group {
+	// 	padding: 1.25em;
+	// 	border-radius: 12px;
+	// 	border: 1px solid rgba(0, 0, 0, 0.08);
+	// }
+
+	.product-config__label {
+		display: block;
+		font-family: $font__heading;
+		font-weight: 600;
+		font-size: 1.5rem;
+		margin-bottom: 0.75em;
+		color: $color__text-main;
+	}
+
+	.product-config__values {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5em;
+	}
+
+	.product-config__buttons {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75em;
+	}
+
+	.product-config__buttons--color {
+		background: var(--swatch-bg, #120E17);
+		gap: 0.75em;
+	}
+
+	.product-config__btn {
+		padding: 0.5em 1em;
+		background: #f5f5f7;
+		border: 2px solid transparent;
+		border-radius: 10px;
+		font-family: $font__heading;
+		font-size: 1.25rem;
+		font-weight: 500;
+		color: $color__text-main;
+		cursor: pointer;
+		transition: border-color 0.2s, background 0.2s;
+
+		&:hover {
+			background: #ebebed;
+		}
+
+		&.is-selected {
+			border-color: #4B90F1;
+			background: $color__white;
+			box-shadow: 0 0 0 1px #4B90F1;
+		}
+	}
+
+	.product-config__buttons--color .product-config__btn {
+		width: var(--swatch-size, 44px);
+		height: var(--swatch-size, 44px);
+		padding: 0;
+		border-radius: 50%;
+		border: none;
+		background: var(--swatch-color, #ddd);
+		box-shadow: 0 1.183px 3.549px 0 rgba(0, 0, 0, 0.10) inset;
+
+		&.is-selected {
+			border: 2px solid #4B90F1!important;
+			background: var(--swatch-color, #ddd);
+		}
+	}
+
+	.product-config__btn--swatch {
+		background: var(--swatch-color, #ddd);
+
+		&.product-config__btn--has-color {
+			height: 50px;
+			width: 50px;
+			border-radius: 100%;
+			text-indent: -9999px;
+			overflow: hidden;
+			box-shadow: 0 1.183px 3.549px 0 rgba(0, 0, 0, 0.30) inset;
+			border: none;
+
+			&.is-selected {
+				border: 2px solid #4B90F1;
+			}
+		}
+	}
+
+	.product-config__reset {
+		font-size: 0.85rem;
+		color: $color__light-blue;
+		margin-top: 0.5em;
+		display: inline-block;
+	}
+
+	.single_variation_wrap {
+		margin-top: 1.25em;
+		padding: 1.25em;
+		background: #e8e9eb;
+		border-radius: 12px;
+		border: 1px solid rgba(0, 0, 0, 0.08);
+
+		.woocommerce-variation-add-to-cart {
+			.quantity { display: none; }
+		}
+
+		.woocommerce-variation-price .price {
+			font-size: 1.5rem;
+			margin-bottom: 0.75em;
+		}
+	}
+
+	.product-config__klarna {
+		margin: 1em 0 0;
+		font-size: 0.9rem;
+		color: $color__text-main;
+	}
+}
+
+.single-product .quantity {
+	display: none!important;
+}
+
+.stock {
+	&:empty::before { display: none; }
+	&.in-stock { color: $woocommerce__color-success; }
+	&.out-of-stock { color: $woocommerce__color-error; }
+}

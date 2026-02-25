@@ -1,0 +1,359 @@
+/**
+ * Footer – SlimGebruikt design
+ * 0. Newsletter, 1. Trust bar, 2. Main (brand + nav + badges), 3. Bottom
+ */
+
+@import "newsletter";
+
+.site-footer {
+	margin-top: auto;
+	margin-bottom: 0;
+}
+
+// 1. Trust bar
+.footer-trust {
+	padding: 0 $spacing__page-horizontal 0;
+	background: $color__offwhite;
+}
+
+.footer-trust__inner {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 2em 3em;
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 1em $spacing__page-horizontal;
+	background: $color__white;
+	border-radius: 0 0 10px 10px;
+}
+
+.footer-trust__carousel {
+	display: block;
+	width: 100%;
+	text-align: center;
+
+	@media (min-width: 48em) {
+		display: none;
+	}
+}
+
+.footer-trust__carousel-wrap {
+	overflow: hidden;
+	min-height: 1.4em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	perspective: 1000px;
+}
+
+.footer-trust__carousel-text {
+	display: inline-block;
+	font-size: 0.875rem;
+	color: $color__text-main;
+	transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	will-change: transform;
+	backface-visibility: hidden;
+}
+
+.footer-trust__carousel-text::before {
+	content: "";
+	display: inline-block;
+	width: 1.25em;
+	height: 1.25em;
+	border-radius: 50%;
+	background: $color__offwhite;
+	margin-right: 0.5em;
+	vertical-align: middle;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%238AEA92' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 0.7em;
+}
+
+.footer-trust__items {
+	display: none;
+
+	@media (min-width: 48em) {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		gap: 2em 3em;
+	}
+}
+
+.footer-trust__item {
+	display: flex;
+	align-items: center;
+	gap: 0.5em;
+	font-size: 0.875rem;
+	color: $color__text-main;
+
+	&::before {
+		content: "";
+		display: inline-block;
+		width: 1.25em;
+		height: 1.25em;
+		border-radius: 50%;
+		background: $color__offwhite;
+		flex-shrink: 0;
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%238AEA92' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 0.7em;
+	}
+}
+
+// 2. Main footer
+.footer-main {
+	background: $color__offwhite;
+	padding: 2.5em 0;
+}
+
+.footer-main__inner {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 2.5em;
+	padding: 0 $spacing__page-horizontal;
+}
+
+@media (min-width: 48em) {
+	.footer-main__inner {
+		grid-template-columns: auto 1fr auto;
+		align-items: start;
+	}
+}
+
+@media (min-width: 64em) {
+	.footer-main__inner {
+		grid-template-columns: 260px 1fr 140px;
+		gap: 3em;
+	}
+}
+
+// Brand column
+.footer-brand {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+.footer-brand__logo {
+	display: flex;
+	align-items: center;
+
+	a {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5em;
+		text-decoration: none;
+		font-family: $font__heading;
+		font-size: 1.25rem;
+		font-weight: 700;
+	}
+
+	img {
+		height: 2.5rem;
+		width: auto;
+		max-width: 100%;
+	}
+
+	.footer-brand__icon {
+		color: $color__dark-blue;
+		display: flex;
+	}
+
+	.footer-brand__text--slim {
+		color: $color__dark-blue;
+	}
+
+	.footer-brand__text--gebruikt {
+		color: $color__light-blue;
+	}
+}
+
+.footer-contact {
+	display: flex;
+	flex-direction: column;
+	gap: 0.35em;
+}
+
+.footer-contact__item {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+	color: $color__text-main;
+	text-decoration: none;
+	font-size: 0.9rem;
+
+	svg {
+		flex-shrink: 0;
+		opacity: 0.7;
+	}
+
+	&:hover {
+		color: $color__dark-blue;
+	}
+}
+
+.footer-address {
+	font-style: normal;
+	font-size: 0.9rem;
+	color: $color__text-main;
+	line-height: 1.5;
+	margin: 0;
+}
+
+.footer-address__note {
+	display: block;
+	margin-top: 0.25em;
+	font-size: 0.85em;
+	opacity: 0.6;
+}
+
+.footer-hours {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5em;
+	padding: 0.4em 1em;
+	background: $color__white;
+	border: 1px solid $color__border-input;
+	border-radius: 999px;
+	font-size: 0.875rem;
+	color: $color__text-main;
+	width: fit-content;
+}
+
+.footer-hours__dot {
+	width: 0.5em;
+	height: 0.5em;
+	border-radius: 50%;
+	background: $color__light-green;
+}
+
+// Nav columns
+.footer-nav {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+	gap: 2em 3em;
+}
+
+@media (min-width: 48em) {
+	.footer-nav {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+.footer-nav__col {
+	&--products .footer-nav__menu {
+		column-count: 2;
+		column-gap: 2em;
+	}
+}
+
+.footer-nav__title {
+	margin: 0 0 0.75em;
+	font-family: $font__heading;
+	font-size: 1.875rem;
+	font-weight: 600;
+	color: $color__text-main;
+}
+
+.footer-nav__menu {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	li {
+		margin: 0 0 0.4em;
+	}
+
+	a {
+		color: $color__text-main;
+		text-decoration: none;
+		font-size: 0.9rem;
+
+		&:hover {
+			color: $color__dark-blue;
+		}
+	}
+}
+
+// Trustmark badge
+.footer-badges {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-end;
+}
+
+.footer-badge {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0.5em 0.75em;
+	background: $color__white;
+	border: 1px solid $color__border-input;
+	border-radius: 6px;
+	font-size: 0.65rem;
+	font-weight: 700;
+	letter-spacing: 0.02em;
+	text-align: center;
+	line-height: 1.3;
+}
+
+.footer-badge__trustmark {
+	display: block;
+	color: #c00;
+}
+
+.footer-badge__keurmerk {
+	display: block;
+	color: $color__text-main;
+	margin-top: 0.15em;
+}
+
+// 3. Bottom bar
+.footer-bottom {
+	background: $color__offwhite;
+	padding: 1.25em $spacing__page-horizontal;
+	margin-bottom: 0;
+	border-top: 1px solid white;
+}
+
+.footer-bottom__inner {
+	text-align: center;
+}
+
+.footer-bottom__copy {
+	margin: 0 0 0.5em;
+	font-size: 0.875rem;
+	color: $color__text-main;
+}
+
+.footer-bottom__credit {
+	margin: 0;
+	font-size: 0.8rem;
+	color: $color__text-main;
+	opacity: 0.7;
+}
+
+.footer-bottom__linqd {
+	display: inline-block;
+	vertical-align: middle;
+	text-decoration: none;
+	line-height: 0;
+
+	&:hover .footer-bottom__logo {
+		opacity: 0.8;
+	}
+}
+
+.footer-bottom__logo {
+	display: block;
+	height: 24px;
+	width: auto;
+	opacity: 1;
+	transition: opacity 0.2s ease;
+}

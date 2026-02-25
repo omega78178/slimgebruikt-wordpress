@@ -1,0 +1,48 @@
+/*
+Theme Name: slimgebruikt
+
+WooCommerce styles override
+*/
+
+// WooCommerce color variables (Mobistock)
+$woocommerce__color-error: #e2401c;
+$woocommerce__color-success: #8AEA92;
+$woocommerce__color-info: #4BC9F1;
+
+// Import variables and mixins
+@import "abstracts/abstracts";
+
+/**
+ * Shop tables
+ */
+@import "plugins/woocommerce/tables";
+
+/**
+ * Shop archive
+ */
+@import "plugins/woocommerce/shop";
+
+/**
+ * Products
+ */
+@import "plugins/woocommerce/products";
+
+/**
+ * Single product
+ */
+@import "plugins/woocommerce/single-product";
+
+/**
+ * Checkout
+ */
+@import "plugins/woocommerce/checkout";
+
+/**
+ * General WooCommerce components
+ */
+@import "plugins/woocommerce/components";
+
+/**
+ * WooCommerce widgets
+ */
+@import "plugins/woocommerce/widgets";

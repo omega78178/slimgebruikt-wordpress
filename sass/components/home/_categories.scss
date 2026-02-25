@@ -1,0 +1,125 @@
+/**
+ * Home categories – 4 blokken 2x2 grid
+ */
+
+// .home-categories {
+// 	padding: 2em 0 3em;
+// 	background: $color__black;
+// }
+
+.home-categories__inner {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1em;
+	margin: 0 auto;
+}
+
+@media (max-width: 47.99em) {
+	.home-categories__inner {
+		grid-template-columns: 1fr;
+		gap: 0.75em;
+	}
+}
+
+.home-cat {
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	min-height: 140px;
+	padding: 1.25em;
+
+	@media (min-width: $breakpoint-tablet) {
+		min-height: 180px;
+		padding: 1.5em;
+	}
+	border-radius: 16px;
+	text-decoration: none;
+	overflow: hidden;
+
+	&--iphones {
+		background: linear-gradient(105deg, #120E17 39.37%, #696969 100%);
+	}
+
+	&--ipads {
+		background: linear-gradient(197deg, #4BC9F1 24%, #EFFFF0 122.84%);
+	}
+
+	&--apple {
+		background: linear-gradient(188deg, #FFD2F3 6.5%, #FF9AE4 96.18%);
+	}
+
+	&--deals {
+		background: linear-gradient(113deg, #4BC9F1 0%, #3A28CC 159.85%);
+	}
+}
+
+.home-cat__content {
+	position: relative;
+	z-index: 1;
+}
+
+.home-cat__title {
+	margin: 0 0 0.75em;
+	font-family: $font__heading;
+	font-size: clamp(1.5rem, 5vw, 3.8rem);
+	font-weight: 500;
+	color: $color__white;
+	line-height: 1.2;
+	max-width: 100%;
+
+	@media (min-width: $breakpoint-tablet) {
+		line-height: 54px;
+		max-width: 300px;
+	}
+}
+
+.home-cat__btn {
+	display: inline-block;
+	padding: 0.5em 1em;
+	background: $color__white;
+	color: $color__text-main;
+	border-radius: 100px;
+	font-family: $font__heading;
+	font-size: 1.25rem;
+	font-weight: 500;
+}
+
+.home-cat__image {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	max-width: 250px;
+	height: 100%;
+	min-height: 100px;
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	background-size: contain;
+	opacity: 0.9;
+
+	img {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		object-position: right bottom;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: 80px;
+		height: 80px;
+		background: rgba(255, 255, 255, 0.15);
+		border-radius: 50%;
+	}
+
+	&:has(img)::after {
+		display: none;
+	}
+}

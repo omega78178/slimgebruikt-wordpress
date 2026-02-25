@@ -1,0 +1,25 @@
+/**
+ * Page container –zelfde horizontale marge als header
+ * Sticky footer: footer onderaan bij korte pagina's
+ */
+
+.site {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.site-main {
+	flex: 1;
+	padding-left: $spacing__page-horizontal;
+	padding-right: $spacing__page-horizontal;
+
+	@media (max-width: 47.99em) {
+		padding-left: 0.5em;
+		padding-right: 0.5em;
+	}
+
+	&--front {
+		padding-top: 0;
+	}
+}

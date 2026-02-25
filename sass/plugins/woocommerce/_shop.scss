@@ -1,0 +1,37 @@
+/**
+ * Shop archive – result count, ordering, layout
+ */
+
+.woocommerce-products-header {
+	margin-bottom: 1.5em;
+
+	.woocommerce-products-header__title {
+		font-family: $font__heading;
+	}
+}
+
+.woocommerce-result-count,
+.woocommerce-ordering {
+	margin-bottom: 1em;
+	font-size: 0.9rem;
+}
+
+.woocommerce-ordering select {
+	padding: 0.5em;
+	border-color: $color__border-input;
+	background: $color__white;
+}
+
+body.woocommerce,
+body.woocommerce-page {
+	.site-main {
+		background: $color__white;
+		padding-top: 1.5em;
+		padding-bottom: 1.5em;
+	}
+}
+
+/* Full width shop – no sidebar */
+.post-type-archive-product .site-main {
+	width: 100%;
+}
