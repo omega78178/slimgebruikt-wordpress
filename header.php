@@ -46,11 +46,11 @@
 		?>
 		<div class="header-promo">
 			<script type="application/json" id="promo-texts"><?php echo wp_json_encode( $promo_texts ); ?></script>
-			<button class="header-promo__prev" type="button" aria-label="<?php esc_attr_e( 'Previous', 'slimgebruikt' ); ?>">&lt;</button>
+			<!-- <button class="header-promo__prev" type="button" aria-label="<?php esc_attr_e( 'Previous', 'slimgebruikt' ); ?>">&lt;</button> -->
 			<div class="header-promo__text-wrap">
 				<span class="header-promo__text" aria-live="polite"><?php echo esc_html( $promo_texts[0] ); ?></span>
 			</div>
-			<button class="header-promo__next" type="button" aria-label="<?php esc_attr_e( 'Next', 'slimgebruikt' ); ?>">&gt;</button>
+			<!-- <button class="header-promo__next" type="button" aria-label="<?php esc_attr_e( 'Next', 'slimgebruikt' ); ?>">&gt;</button> -->
 		</div>
 
 		<?php

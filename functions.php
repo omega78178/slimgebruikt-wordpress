@@ -168,23 +168,31 @@ function slimgebruikt_scripts() {
 	wp_enqueue_style( 'slimgebruikt-style', get_stylesheet_uri(), array( 'degular-typekit', 'slimgebruikt-fonts' ), $style_version );
 	wp_style_add_data( 'slimgebruikt-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'slimgebruikt-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'slimgebruikt-mobile-nav', get_template_directory_uri() . '/js/mobile-nav.js', array(), _S_VERSION, true );
+	$theme_js = get_template_directory() . '/js/theme.js';
+	$theme_version = file_exists( $theme_js ) ? filemtime( $theme_js ) : _S_VERSION;
+	wp_enqueue_script( 'slimgebruikt-theme', get_template_directory_uri() . '/js/theme.js', array(), $theme_version, true );
 	wp_enqueue_script( 'slimgebruikt-motion', get_template_directory_uri() . '/js/motion.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'slimgebruikt-promo', get_template_directory_uri() . '/js/promo-carousel.js', array(), _S_VERSION, true );
 
 	if ( is_front_page() ) {
 		wp_enqueue_script( 'slimgebruikt-weekdeal-countdown', get_template_directory_uri() . '/js/weekdeal-countdown.js', array(), _S_VERSION, true );
-		if ( class_exists( 'WooCommerce' ) ) {
-			wp_enqueue_style( 'swiper', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css', array(), '8' );
-			wp_enqueue_script( 'swiper', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js', array(), '8', true );
-			wp_enqueue_script( 'slimgebruikt-bestsellers', get_template_directory_uri() . '/js/bestsellers-swiper.js', array( 'swiper' ), _S_VERSION, true );
-			wp_enqueue_script( 'slimgebruikt-products-swiper', get_template_directory_uri() . '/js/products-swiper.js', array( 'swiper' ), _S_VERSION, true );
-		}
+	}
+	if ( ( is_front_page() || is_page_template( 'template-landing.php' ) ) && class_exists( 'WooCommerce' ) ) {
+		wp_enqueue_style( 'swiper', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css', array(), '8' );
+		wp_enqueue_script( 'swiper', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js', array(), '8', true );
+		wp_enqueue_script( 'slimgebruikt-bestsellers', get_template_directory_uri() . '/js/bestsellers-swiper.js', array( 'swiper' ), _S_VERSION, true );
+		wp_enqueue_script( 'slimgebruikt-products-swiper', get_template_directory_uri() . '/js/products-swiper.js', array( 'swiper' ), _S_VERSION, true );
 	}
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
+	}
+
+	if ( is_page_template( 'template-landing.php' ) || is_front_page() ) {
+		$landing_css = get_template_directory() . '/css/landing.css';
+		$landing_ver = file_exists( $landing_css ) ? filemtime( $landing_css ) : _S_VERSION;
+		wp_enqueue_style( 'slimgebruikt-landing', get_template_directory_uri() . '/css/landing.css', array( 'slimgebruikt-style' ), $landing_ver );
+		$landing_js = get_template_directory() . '/js/landing-motion.js';
+		wp_enqueue_script( 'slimgebruikt-landing-motion', get_template_directory_uri() . '/js/landing-motion.js', array(), file_exists( $landing_js ) ? filemtime( $landing_js ) : _S_VERSION, true );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'slimgebruikt_scripts' );
@@ -193,7 +201,7 @@ add_action( 'wp_enqueue_scripts', 'slimgebruikt_scripts' );
  * Add type="module" to Motion script (ES modules).
  */
 function slimgebruikt_script_module( $tag, $handle, $src ) {
-	if ( 'slimgebruikt-motion' === $handle ) {
+	if ( in_array( $handle, array( 'slimgebruikt-motion', 'slimgebruikt-landing-motion' ), true ) ) {
 		return str_replace( '<script ', '<script type="module" ', $tag );
 	}
 	return $tag;

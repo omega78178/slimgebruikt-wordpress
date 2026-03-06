@@ -25,6 +25,19 @@ function initProductCards() {
 	}, { amount: 0.1 });
 }
 
+function initVariationWrap() {
+	document.addEventListener("slimgebruikt:variationWrapVisible", (e) => {
+		const wrap = e.detail?.el;
+		if (!wrap || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+		wrap.style.opacity = "0";
+		wrap.style.transform = "translateY(20px)";
+		animate(wrap, { opacity: [0, 1], y: [20, 0] }, { duration: 0.45, ease: easing }).finished.then(() => {
+			wrap.style.opacity = "";
+			wrap.style.transform = "";
+		});
+	});
+}
+
 if (document.readyState === "loading") {
 	document.addEventListener("DOMContentLoaded", init);
 } else {
@@ -35,4 +48,5 @@ function init() {
 	initFadeUp();
 	initFadeIn();
 	initProductCards();
+	initVariationWrap();
 }

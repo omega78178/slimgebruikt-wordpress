@@ -1,0 +1,81 @@
+/**
+ * Landing page – hero + full-width content
+ */
+
+.site-main--landing {
+	padding-top: 0;
+}
+
+.landing-hero {
+	padding: 3em $spacing__page-horizontal 4em;
+	text-align: center;
+
+	&--dark {
+		background: linear-gradient(105deg, #120E17 39%, #696969 100%);
+
+		.landing-hero__title,
+		.landing-hero__subtitle {
+			color: $color__white;
+		}
+
+		.landing-hero__cta {
+			background: $color__light-blue;
+			color: $color__white;
+
+			&:hover {
+				background: $color__white;
+				color: $color__dark-blue;
+			}
+		}
+	}
+
+	&__inner {
+		max-width: $size__site-max-width;
+		margin: 0 auto;
+	}
+
+	&__title {
+		margin: 0 0 0.5em;
+		font-family: $font__heading;
+		font-size: clamp(2rem, 6vw, 4rem);
+		font-weight: 700;
+		line-height: 1.2;
+		color: $color__text-main;
+	}
+
+	&__subtitle {
+		margin: 0 0 1.5em;
+		font-size: 1.125rem;
+		line-height: 1.5;
+		color: $color__text-main;
+		opacity: 0.9;
+	}
+
+	&__cta {
+		display: inline-block;
+		padding: 0.75em 1.75em;
+		background: $color__dark-blue;
+		color: $color__white;
+		border-radius: 999px;
+		font-family: $font__heading;
+		font-weight: 600;
+		text-decoration: none;
+		transition: background 0.2s, color 0.2s;
+
+		&:hover {
+			background: $color__light-blue;
+		}
+	}
+}
+
+.landing-content {
+	padding: 2em 0;
+
+	.entry-header {
+		margin-bottom: 1em;
+	}
+
+	.entry-title {
+		font-size: clamp(1.5rem, 4vw, 2.5rem);
+	}
+}

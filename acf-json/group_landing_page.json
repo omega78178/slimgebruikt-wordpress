@@ -1,0 +1,224 @@
+{
+    "key": "group_landing_page",
+    "title": "Landing page",
+    "fields": [
+        {
+            "key": "field_landing_hero_tab",
+            "label": "Hero sectie",
+            "name": "",
+            "type": "tab"
+        },
+        {
+            "key": "field_landing_hero_title",
+            "label": "Hero titel",
+            "name": "landing_hero_title",
+            "type": "text",
+            "instructions": "Grote titel boven de page content. Laat leeg om hero over te slaan."
+        },
+        {
+            "key": "field_landing_hero_subtitle",
+            "label": "Hero subtekst",
+            "name": "landing_hero_subtitle",
+            "type": "textarea",
+            "rows": 2
+        },
+        {
+            "key": "field_landing_hero_cta_text",
+            "label": "CTA knoptekst",
+            "name": "landing_hero_cta_text",
+            "type": "text",
+            "placeholder": "Bijv. Bekijk aanbieding"
+        },
+        {
+            "key": "field_landing_hero_cta_url",
+            "label": "CTA link URL",
+            "name": "landing_hero_cta_url",
+            "type": "url"
+        },
+        {
+            "key": "field_landing_hero_bg",
+            "label": "Donkere achtergrond",
+            "name": "landing_hero_bg",
+            "type": "true_false",
+            "message": "Donkere gradient gebruiken (standaard: uit)",
+            "default_value": 0
+        },
+        {
+            "key": "field_landing_hero_image",
+            "label": "Hero afbeelding",
+            "name": "landing_hero_image",
+            "type": "image",
+            "return_format": "url",
+            "preview_size": "medium",
+            "instructions": "Afbeelding in de ronde cirkel rechts in de hero (onder de achtergrondcirkel)"
+        },
+        {
+            "key": "field_landing_hero_usps",
+            "label": "Hero USP-blokken",
+            "name": "landing_hero_usps",
+            "type": "repeater",
+            "instructions": "Voeg of wijzig USP-kaarten toe. Laat leeg voor standaardblokken.",
+            "min": 0,
+            "max": 8,
+            "layout": "block",
+            "button_label": "USP toevoegen",
+            "sub_fields": [
+                {
+                    "key": "field_landing_hero_usp_title",
+                    "label": "Titel",
+                    "name": "title",
+                    "type": "text",
+                    "placeholder": "Bijv. Garantie inbegrepen"
+                },
+                {
+                    "key": "field_landing_hero_usp_text",
+                    "label": "Tekst",
+                    "name": "text",
+                    "type": "textarea",
+                    "rows": 2
+                },
+                {
+                    "key": "field_landing_hero_usp_icon",
+                    "label": "Icoon",
+                    "name": "icon",
+                    "type": "select",
+                    "choices": {
+                        "shield": "Schild (garantie)",
+                        "magnifier": "Vergrootglas (controle)",
+                        "truck": "Vrachtwagen (levering)",
+                        "wallet": "Portemonnee (besparen)",
+                        "custom": "Eigen SVG"
+                    },
+                    "default_value": "shield"
+                },
+                {
+                    "key": "field_landing_hero_usp_icon_svg",
+                    "label": "Eigen SVG-code",
+                    "name": "icon_svg",
+                    "type": "textarea",
+                    "rows": 4,
+                    "instructions": "Plak hier je SVG-code wanneer je 'Eigen SVG' hebt gekozen. Alleen veilige SVG-elementen worden getoond.",
+                    "conditional_logic": [[{"field": "field_landing_hero_usp_icon", "operator": "==", "value": "custom"}]]
+                }
+            ]
+        },
+        {
+            "key": "field_landing_waarom_tab",
+            "label": "Waarom sectie",
+            "name": "",
+            "type": "tab"
+        },
+        {
+            "key": "field_landing_waarom_body",
+            "label": "Waarom tekst",
+            "name": "landing_waarom_body",
+            "type": "wysiwyg",
+            "instructions": "Tekst voor de 'Waarom slimgebruikt.nl' sectie"
+        },
+        {
+            "key": "field_landing_waarom_image",
+            "label": "Waarom afbeelding",
+            "name": "landing_waarom_image",
+            "type": "image",
+            "return_format": "url",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_landing_faq_tab",
+            "label": "FAQ sectie",
+            "name": "",
+            "type": "tab"
+        },
+        {
+            "key": "field_landing_faq_title",
+            "label": "FAQ titel",
+            "name": "landing_faq_title",
+            "type": "text",
+            "placeholder": "Veel gestelde vragen"
+        },
+        {
+            "key": "field_landing_faq_intro",
+            "label": "FAQ introtekst",
+            "name": "landing_faq_intro",
+            "type": "textarea",
+            "rows": 3
+        },
+        {
+            "key": "field_landing_faq_more_url",
+            "label": "Link 'Bekijk alles' URL",
+            "name": "landing_faq_more_url",
+            "type": "url",
+            "placeholder": "/faq/"
+        },
+        {
+            "key": "field_landing_faq_items",
+            "label": "FAQ items",
+            "name": "landing_faq_items",
+            "type": "repeater",
+            "instructions": "Vraag en antwoord. Laat leeg voor standaard FAQ.",
+            "min": 0,
+            "max": 20,
+            "layout": "block",
+            "button_label": "Vraag toevoegen",
+            "sub_fields": [
+                {
+                    "key": "field_landing_faq_item_question",
+                    "label": "Vraag",
+                    "name": "question",
+                    "type": "text"
+                },
+                {
+                    "key": "field_landing_faq_item_answer",
+                    "label": "Antwoord",
+                    "name": "answer",
+                    "type": "textarea",
+                    "rows": 3
+                }
+            ]
+        },
+        {
+            "key": "field_landing_faq_primary_btn_text",
+            "label": "Primaire knop tekst",
+            "name": "landing_faq_primary_btn_text",
+            "type": "text",
+            "placeholder": "Bekijk refurbished smartphones"
+        },
+        {
+            "key": "field_landing_faq_primary_btn_url",
+            "label": "Primaire knop URL",
+            "name": "landing_faq_primary_btn_url",
+            "type": "url"
+        },
+        {
+            "key": "field_landing_faq_accent_btn_text",
+            "label": "Accent knop tekst",
+            "name": "landing_faq_accent_btn_text",
+            "type": "text",
+            "placeholder": "Bekijk onze weekdeal"
+        },
+        {
+            "key": "field_landing_faq_accent_btn_url",
+            "label": "Accent knop URL",
+            "name": "landing_faq_accent_btn_url",
+            "type": "url"
+        },
+        {
+            "key": "field_landing_content_tab",
+            "label": "Content",
+            "name": "",
+            "type": "tab"
+        },
+        {
+            "key": "field_landing_hide_title",
+            "label": "Paginatitel verbergen",
+            "name": "landing_hide_title",
+            "type": "true_false",
+            "message": "Verberg de H1 paginatitel in de content",
+            "default_value": 0
+        }
+    ],
+    "location": [[{"param": "page_template", "operator": "==", "value": "template-landing.php"}]],
+    "menu_order": 0,
+    "position": "normal",
+    "modified": 1739900000
+}

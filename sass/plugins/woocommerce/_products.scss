@@ -273,9 +273,13 @@
 		height: auto;
 		flex-shrink: 0;
 		box-sizing: border-box;
-		margin-right: 0 !important;
 		display: flex;
 		align-self: stretch;
+		margin-right: 0 !important;
+
+		.product-card {
+			width: 100%;
+		}
 	}
 }
 
@@ -323,8 +327,7 @@ ul.products {
 
 	img {
 		display: block;
-		width: 100%;
-		height: auto;
+		height: 180px;
 		object-fit: contain;
 		margin: 0 auto;
 	}

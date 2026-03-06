@@ -1,6 +1,7 @@
 /**
  * Page container –zelfde horizontale marge als header
  * Sticky footer: footer onderaan bij korte pagina's
+ * Content max-width; containers (header, footer, sections) blijven full-width
  */
 
 .site {
@@ -13,6 +14,10 @@
 	flex: 1;
 	padding-left: $spacing__page-horizontal;
 	padding-right: $spacing__page-horizontal;
+	max-width: $size__site-max-width;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
 
 	@media (max-width: 47.99em) {
 		padding-left: 0.5em;
@@ -20,6 +25,10 @@
 	}
 
 	&--front {
+		padding-top: 0;
+	}
+
+	&--landing {
 		padding-top: 0;
 	}
 }

@@ -1,0 +1,532 @@
+/**
+ * Landing page – Figma SlimGebruikt design
+ * Scoped to .landing-page body class
+ *
+ * @package slimgebruikt
+ */
+
+.landing-page .landing-main {
+	padding-top: 0;
+}
+
+.landing-page .site-main--landing {
+	padding-top: 0;
+}
+
+/* Variables – align met theme (1320px, 1.5em) */
+.landing-page,
+.sg-faq-section {
+	--sg-primary: #3A28CC;
+	--sg-accent: #4BC9F1;
+	--sg-dark: #120E17;
+	--sg-bg: #F2F3F7;
+	--sg-yellow-bg: #FFFAE5;
+	--sg-green: #8AEA92;
+	--sg-white: #ffffff;
+	--sg-text: #120E17;
+	--sg-gray: #828282;
+	--sg-max-width: 1320px;
+	--sg-padding: 1.5em;
+}
+
+@media (max-width: 47.99em) {
+	.landing-page, .sg-faq-section { --sg-padding: 0.5em; }
+}
+
+/* Start hidden – Motion animeert naar zichtbaar; voorkomt flikkering */
+@media (prefers-reduced-motion: no-preference) {
+	.landing-page .sg-hero__bg-circle,
+	.landing-page .sg-hero__image-wrap,
+	.landing-page .sg-hero__headline,
+	.landing-page .sg-hero__sub,
+	.landing-page .sg-usp-card,
+	.landing-page .sg-hero__buttons,
+	.landing-page .sg-waarom .sg-section-title,
+	.landing-page .sg-waarom__body,
+	.landing-page .sg-waarom__image,
+	.landing-page .sg-slim__headline,
+	.landing-page .sg-slim__body,
+	.landing-page .sg-slim__usp-item,
+	.landing-page .sg-faq__header,
+	.landing-page .sg-faq__intro,
+	.landing-page .sg-faq__grid > .sg-faq__item-wrap,
+	.landing-page .sg-faq__buttons,
+	.landing-page .landing-main .products-section__header {
+		opacity: 0;
+	}
+	/* Homepage – start hidden voor scroll-in animaties */
+	.site-main--front .hero__tagline,
+	.site-main--front .hero__title,
+	.site-main--front .hero__desc,
+	.site-main--front .hero__cta,
+	.site-main--front .hero__card--benefits,
+	.site-main--front .hero__card--weekdeal,
+	.site-main--front .home-cat,
+	.site-main--front .products-section__header,
+	.site-main--front .home-features__header,
+	.site-main--front .home-feature,
+	.site-main--front .bestsellers-section__header,
+	.site-main--front .home-wysiwyg,
+	.site-main--front .home-cta,
+	.site-main--front .home-image-text,
+	.site-main--front .sg-faq__header,
+	.site-main--front .sg-faq__intro,
+	.site-main--front .sg-faq__grid > .sg-faq__item-wrap,
+	.site-main--front .sg-faq__buttons {
+		opacity: 0;
+	}
+}
+
+/* Hero – full-width achtergrond, content max 1320px zoals home */
+.landing-page .sg-hero {
+	background: var(--sg-yellow-bg);
+	min-height: 540px;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+.landing-page .sg-hero__bg-circle {
+	position: absolute;
+	right: -80px;
+	top: -200px;
+	width: 699px;
+	height: 699px;
+	background: #F1ECD7;
+	border-radius: 50%;
+	pointer-events: none;
+	z-index: 0;
+}
+
+.landing-page .sg-hero__image-wrap {
+	position: absolute;
+	right: -200px;
+	top: 170px;
+	width: 900px;
+	height: 900px;
+	border-radius: 50%;
+	overflow: hidden;
+	pointer-events: none;
+	z-index: 1;
+}
+
+.landing-page .sg-hero__image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.landing-page .sg-hero__content {
+	position: relative;
+	z-index: 2;
+	max-width: var(--sg-max-width);
+	margin: 0 auto;
+	padding: 60px var(--sg-padding);
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.landing-page .sg-hero__headline {
+	font-family: "degular-display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	font-weight: 600;
+	font-size: 88px;
+	line-height: 1;
+	color: var(--sg-dark);
+	max-width: 600px;
+	margin-bottom: 20px;
+}
+
+.landing-page .sg-hero__sub {
+	font-size: 18px;
+	line-height: 1.6;
+	max-width: 600px;
+	margin-bottom: 32px;
+}
+
+.landing-page .sg-hero__sub strong {
+	font-weight: 600;
+}
+
+.landing-page .sg-hero__usps {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 20px;
+	margin-bottom: 40px;
+	max-width: 1060px;
+}
+
+.landing-page .sg-usp-card {
+	background: #fff;
+	border-radius: 13px;
+	padding: 24px 20px 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: 10px;
+}
+
+.landing-page .sg-usp-card__icon {
+	width: 52px;
+	height: 52px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.landing-page .sg-usp-card__icon svg {
+	width: 63px;
+	height: 30px;
+}
+
+.landing-page .sg-usp-card__title {
+	font-family: "degular-display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	font-weight: 600;
+	font-size: 24px;
+}
+
+.landing-page .sg-usp-card__text {
+	font-size: 12px;
+	line-height: 1.5;
+	color: #444;
+}
+
+.landing-page .sg-hero__buttons {
+	display: flex;
+	gap: 16px;
+}
+
+.landing-page .sg-btn-primary,
+.sg-faq-section .sg-btn-primary {
+	display: inline-block;
+	background: var(--sg-primary);
+	color: #fff;
+	border: none;
+	border-radius: 100px;
+	padding: 14px 32px;
+	font-family: "degular-display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	font-weight: 500;
+	font-size: 20px;
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	transition: opacity 0.2s;
+}
+
+.landing-page .sg-btn-accent,
+.sg-faq-section .sg-btn-accent {
+	display: inline-block;
+	background: var(--sg-accent);
+	color: #fff;
+	border: none;
+	border-radius: 100px;
+	padding: 14px 32px;
+	font-family: "degular-display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	font-weight: 500;
+	font-size: 20px;
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	transition: opacity 0.2s;
+}
+
+.landing-page .sg-btn-outline,
+.sg-faq-section .sg-btn-outline {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	background: transparent;
+	color: var(--sg-dark);
+	border: 1px solid var(--sg-dark);
+	border-radius: 100px;
+	padding: 9px 24px;
+	font-family: "degular-display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	font-weight: 500;
+	font-size: 18px;
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	transition: background 0.2s;
+}
+
+.landing-page .sg-btn-primary:hover,
+.landing-page .sg-btn-accent:hover,
+.sg-faq-section .sg-btn-primary:hover,
+.sg-faq-section .sg-btn-accent:hover { opacity: 0.88; }
+.landing-page .sg-btn-outline:hover,
+.sg-faq-section .sg-btn-outline:hover { background: var(--sg-bg); }
+
+/* Section titles */
+.landing-page .sg-section-title,
+.sg-faq-section .sg-section-title {
+	font-family: "degular-display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	font-weight: 600;
+	font-size: 54px;
+	color: var(--sg-dark);
+	margin-bottom: 24px;
+}
+
+/* Waarom */
+.landing-page .sg-waarom {
+	background: #fff;
+	padding: 30px 0;
+}
+
+.landing-page .sg-waarom__inner {
+	max-width: var(--sg-max-width);
+	margin: 0 auto;
+	padding: 0;
+	display: grid;
+	grid-template-columns: 1fr auto;
+	gap: 60px;
+	align-items: center;
+}
+
+.landing-page .sg-waarom__body {
+	font-size: 18px;
+	line-height: 1.7;
+	color: var(--sg-dark);
+	max-width: 640px;
+}
+
+.landing-page .sg-waarom__image {
+	width: 468px;
+	height: 382px;
+	object-fit: cover;
+	border-radius: 15px;
+	display: block;
+}
+
+/* Slim section */
+.landing-page .sg-slim {
+	background: #fff;
+	padding: 30px 0;
+}
+
+.landing-page .sg-slim__inner {
+	max-width: var(--sg-max-width);
+	margin: 0 auto;
+	padding: 0 var(--sg-padding);
+	display: grid;
+	grid-template-columns: 1fr 470px;
+	gap: 60px;
+	align-items: center;
+}
+
+.landing-page .sg-slim__headline {
+	font-family: "degular-display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	font-weight: 600;
+	font-size: 54px;
+	line-height: 1.1;
+	color: var(--sg-dark);
+	margin-bottom: 24px;
+}
+
+.landing-page .sg-slim__headline em {
+	font-style: italic;
+	text-decoration: underline;
+}
+
+.landing-page .sg-slim__body {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.65;
+	max-width: 520px;
+}
+
+.landing-page .sg-slim__banner {
+	background: linear-gradient(156deg, #4BC9F1 19%, #fff 212%);
+	border-radius: 15px;
+	box-shadow: 0 0 50px rgba(0,0,0,0.10);
+	padding: 28px 22px;
+}
+
+.landing-page .sg-slim__usps {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.landing-page .sg-slim__usp-item {
+	display: flex;
+	align-items: flex-start;
+	gap: 14px;
+	font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	font-size: 18px;
+	color: #fff;
+	line-height: 1.4;
+}
+
+.landing-page .sg-slim__usp-check {
+	background: rgba(255,255,255,0.9);
+	border-radius: 5px;
+	width: 27px;
+	height: 27px;
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 2px;
+}
+
+.landing-page .sg-slim__usp-check svg {
+	stroke: var(--sg-accent);
+	width: 16px;
+	height: 16px;
+}
+
+.landing-page .sg-slim__usp-item strong {
+	text-decoration: underline;
+	font-weight: 700;
+}
+
+/* FAQ */
+.landing-page .sg-faq,
+.sg-faq-section .sg-faq {
+	background: #fff;
+	padding: 30px 0;
+}
+
+.landing-page .sg-faq__inner,
+.sg-faq-section .sg-faq__inner {
+	max-width: var(--sg-max-width);
+	margin: 0 auto;
+	padding: 0 var(--sg-padding);
+}
+
+.landing-page .sg-faq__header,
+.sg-faq-section .sg-faq__header {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	margin-bottom: 12px;
+}
+
+.landing-page .sg-faq__intro,
+.sg-faq-section .sg-faq__intro {
+	font-weight: 500;
+	font-size: 16px;
+	margin-bottom: 36px;
+	max-width: 600px;
+	line-height: 1.6;
+}
+
+.landing-page .sg-faq__grid,
+.sg-faq-section .sg-faq__grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 30px;
+	margin-bottom: 36px;
+}
+
+.landing-page .sg-faq__answer-wrap,
+.sg-faq-section .sg-faq__answer-wrap {
+	height: 0;
+	overflow: hidden;
+	margin-top: -15px;
+}
+
+.landing-page .sg-faq__item,
+.sg-faq-section .sg-faq__item {
+	background: var(--sg-bg);
+	border-radius: 15px;
+	height: 62px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 24px;
+	cursor: pointer;
+	border: none;
+	text-align: left;
+	width: 100%;
+	font-family: inherit;
+}
+
+.landing-page .sg-faq__question,
+.sg-faq-section .sg-faq__question {
+	font-family: "degular-display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	font-weight: 500;
+	font-size: 20px;
+	color: var(--sg-dark);
+}
+
+.landing-page .sg-faq__icon,
+.sg-faq-section .sg-faq__icon {
+	width: 24px;
+	height: 24px;
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--sg-dark);
+	font-size: 20px;
+	font-weight: 300;
+	transition: transform 0.3s ease;
+}
+
+.landing-page .sg-faq__item[aria-expanded="true"] .sg-faq__icon,
+.sg-faq-section .sg-faq__item[aria-expanded="true"] .sg-faq__icon {
+	transform: rotate(45deg);
+}
+
+.landing-page .sg-faq__answer,
+.sg-faq-section .sg-faq__answer {
+	padding: 35px 24px;
+	font-size: 15px;
+	line-height: 1.6;
+	background: var(--sg-bg);
+	border-radius: 0 0 15px 15px;
+}
+
+.landing-page .sg-faq__buttons,
+.sg-faq-section .sg-faq__buttons {
+	display: flex;
+	gap: 16px;
+	flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+	.landing-page .sg-hero__headline { font-size: 60px; }
+	.landing-page .sg-hero__usps { grid-template-columns: repeat(2, 1fr); }
+	.landing-page .sg-slim__inner { grid-template-columns: 1fr; }
+	.landing-page .sg-waarom__inner { grid-template-columns: 1fr; }
+	.landing-page .sg-waarom__image { display: none; }
+}
+
+@media (max-width: 768px) {
+	.landing-page .sg-hero__headline { font-size: 42px; }
+	.landing-page .sg-hero__usps {
+		display: flex;
+		gap: 16px;
+		margin-left: calc(-1 * var(--sg-padding));
+		margin-right: calc(-1 * var(--sg-padding));
+		padding-left: var(--sg-padding);
+		padding-right: var(--sg-padding);
+		overflow-x: auto;
+		overflow-y: hidden;
+		-webkit-overflow-scrolling: touch;
+		scrollbar-width: none;
+		-ms-overflow-style: none;
+	}
+	.landing-page .sg-hero__usps::-webkit-scrollbar { display: none; }
+	.landing-page .sg-hero__usps .sg-usp-card { flex-shrink: 0; min-width: 240px; }
+	.landing-page .sg-faq__grid,
+	.sg-faq-section .sg-faq__grid { grid-template-columns: 1fr; }
+	.landing-page .sg-hero__bg-circle,
+	.landing-page .sg-hero__image-wrap { display: none; }
+	.landing-page .sg-slim__inner { grid-template-columns: 1fr; gap: 30px; }
+}
+
+@media (max-width: 480px) {
+	.landing-page .sg-hero__headline { font-size: 32px; }
+	.landing-page .sg-hero__usps .sg-usp-card { min-width: 200px; max-width: 300px; }
+	.landing-page .sg-section-title { font-size: 36px; }
+	.landing-page .sg-slim__headline { font-size: 36px; }
+	.landing-page .sg-faq__question,
+	.sg-faq-section .sg-faq__question { font-size: 16px; }
+}

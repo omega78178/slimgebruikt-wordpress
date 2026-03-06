@@ -3,6 +3,13 @@ html {
 	padding: 0;
 }
 
+/* Geen tap highlight op Safari mobile – sitebreed */
+body,
+a,
+button {
+	-webkit-tap-highlight-color: transparent;
+}
+
 body {
 	margin: 0;
 	padding-bottom: 0;

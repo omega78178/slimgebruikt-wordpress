@@ -24,26 +24,6 @@ if ( post_password_required() ) {
 		</div>
 		<div class="product-detail__summary entry-summary">
 			<?php do_action( 'woocommerce_single_product_summary' ); ?>
-			<div class="product-detail__delivery">
-				<p><?php esc_html_e( '2 werkdagen levertijd', 'slimgebruikt' ); ?></p>
-				<p><?php esc_html_e( 'Gratis verzending & retourneren', 'slimgebruikt' ); ?></p>
-			</div>
-			<p class="product-detail__pay">
-				<a href="#"><?php esc_html_e( 'Betaal veilig en snel achteraf', 'slimgebruikt' ); ?></a><br>
-				<small><?php esc_html_e( 'Gratis retourneren binnen 30 dagen', 'slimgebruikt' ); ?></small>
-			</p>
-			<div class="product-detail__retour">
-				<h3 class="product-detail__retour-title"><?php esc_html_e( '30 dagen gratis retourneren', 'slimgebruikt' ); ?></h3>
-				<ul class="product-detail__retour-list">
-					<li><?php esc_html_e( 'Regel de retourzending met slechts een paar klikken in je slimgebruikt-account.', 'slimgebruikt' ); ?></li>
-					<li><?php esc_html_e( 'Stuur het toestel gratis terug binnen 30 dagen na ontvangst.', 'slimgebruikt' ); ?></li>
-					<li><?php esc_html_e( 'Ontvang je geld terug binnen 3 werkdagen nadat de verkoper het toestel heeft ontvangen.', 'slimgebruikt' ); ?></li>
-				</ul>
-			</div>
-			<p class="product-detail__guarantee">
-				<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
-				<?php esc_html_e( 'Gratis verzending & 30 dagen bedenktijd', 'slimgebruikt' ); ?>
-			</p>
 		</div>
 	</div>
 
@@ -67,11 +47,6 @@ if ( post_password_required() ) {
 				</div>
 				<div class="product-about__content">
 					<?php echo wp_kses_post( wpautop( $about_content ) ); ?>
-					<ul class="product-about__bullets">
-						<li><?php esc_html_e( 'Professioneel refurbished', 'slimgebruikt' ); ?></li>
-						<li><?php esc_html_e( '2 jaar garantie*', 'slimgebruikt' ); ?></li>
-						<li><?php esc_html_e( '30 dagen bedenktijd', 'slimgebruikt' ); ?></li>
-					</ul>
 				</div>
 			</div>
 		</section>

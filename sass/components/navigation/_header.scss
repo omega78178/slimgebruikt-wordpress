@@ -48,7 +48,8 @@
 		display: block;
 		margin: 0;
 		padding: 0 0.5em;
-		font-size: 0.875rem;
+		font-size: 0.675rem;
+		font-weight: 600;
 		color: $color__text-main;
 		min-height: 1.4em;
 		transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1);
@@ -158,12 +159,15 @@
 	}
 }
 
-// 2. Main bar (desktop)
+// 2. Main bar (desktop) – content max 1320px
 .header-main {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	gap: 1.5em;
+	max-width: $size__site-max-width;
+	margin-left: auto;
+	margin-right: auto;
 	padding: 1em $spacing__page-horizontal;
 	background: $color__white;
 }
@@ -335,10 +339,10 @@
 	}
 }
 
-// 3. Bottom nav (desktop)
+// 3. Bottom nav (desktop) – achtergrond full width, content max 1320px
 .header-nav {
 	background: $color__offwhite;
-	padding: 0.75em $spacing__page-horizontal;
+	padding: 0.75em 0;
 
 	&__menu,
 	ul {
@@ -349,8 +353,9 @@
 		flex-wrap: wrap;
 		gap: 1.5em 2em;
 		list-style: none;
-		margin: 0;
-		padding: 0;
+		margin: 1px 1px 1px 35px;
+		padding: 0 $spacing__page-horizontal;
+		max-width: $size__site-max-width;
 	}
 
 	li {

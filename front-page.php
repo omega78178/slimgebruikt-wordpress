@@ -61,6 +61,9 @@ $default_order = array( 'hero', 'categories', 'products', 'features', 'bestselle
 			}
 		}
 		?>
+		<section class="sg-faq-section">
+			<?php get_template_part( 'template-parts/component-faq', null, array( 'prefix' => 'home_faq_' ) ); ?>
+		</section>
 	</main>
 
 <?php
