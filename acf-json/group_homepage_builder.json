@@ -1,399 +1,156 @@
 ﻿{
-  "key": "group_homepage_builder",
-  "title": "Homepage secties",
-  "fields": [
-    {
-      "key": "field_homepage_sections",
-      "label": "Secties",
-      "name": "homepage_sections",
-      "type": "flexible_content",
-      "button_label": "Sectie toevoegen",
-      "layouts": {
-        "layout_hero": {
-          "key": "layout_hero",
-          "name": "hero",
-          "label": "Hero",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_hero_tagline",
-              "label": "Tagline",
-              "name": "tagline",
-              "type": "text",
-              "default_value": "Slim gebruikt. Slim bespaard."
-            },
-            {
-              "key": "field_hero_title",
-              "label": "Titel",
-              "name": "title",
-              "type": "text",
-              "default_value": "Refurbished smartphones, tablets & gadgets met garantie."
-            },
-            {
-              "key": "field_hero_desc",
-              "label": "Beschrijving",
-              "name": "desc",
-              "type": "textarea",
-              "rows": 2,
-              "default_value": "Tot wel 40% goedkoper dan nieuw. Volledig gecontroleerd en direct leverbaar."
-            },
-            {
-              "key": "field_hero_btn_primary",
-              "label": "Primaire knop tekst",
-              "name": "btn_primary",
-              "type": "text",
-              "default_value": "Bekijk smartphones"
-            },
-            {
-              "key": "field_hero_btn_secondary",
-              "label": "Secundaire knop tekst",
-              "name": "btn_secondary",
-              "type": "text",
-              "default_value": "Bekijk alle deals"
-            },
-            {
-              "key": "field_hero_benefits_heading",
-              "label": "--- Rechts: Wie slim is ---",
-              "name": "",
-              "type": "tab"
-            },
-            {
-              "key": "field_hero_benefits_title",
-              "label": "Titel (regel 1)",
-              "name": "benefits_title",
-              "type": "text",
-              "default_value": "Wie slim is,"
-            },
-            {
-              "key": "field_hero_benefits_accent",
-              "label": "Titel (regel 2, accent)",
-              "name": "benefits_accent",
-              "type": "text",
-              "default_value": "betaalt minder."
-            },
-            {
-              "key": "field_hero_benefits_items",
-              "label": "Bulletpunten",
-              "name": "benefits_items",
-              "type": "repeater",
-              "layout": "table",
-              "button_label": "Punt toevoegen",
-              "max": 6,
-              "sub_fields": [
-                {
-                  "key": "field_hero_benefits_item_text",
-                  "label": "Tekst",
-                  "name": "text",
-                  "type": "text"
+    "key": "group_homepage_builder",
+    "title": "Homepage secties",
+    "fields": [
+        {
+            "key": "field_homepage_sections",
+            "label": "Secties",
+            "name": "homepage_sections",
+            "type": "flexible_content",
+            "button_label": "Sectie toevoegen",
+            "layouts": {
+                "layout_hero": {
+                    "key": "layout_hero",
+                    "name": "hero",
+                    "label": "Hero",
+                    "display": "block",
+                    "sub_fields": [
+                        {"key": "field_hero_tagline", "label": "Tagline", "name": "tagline", "type": "text", "default_value": "Slim gebruikt. Slim bespaard."},
+                        {"key": "field_hero_title", "label": "Titel", "name": "title", "type": "text", "default_value": "Refurbished smartphones, tablets & gadgets met garantie."},
+                        {"key": "field_hero_desc", "label": "Beschrijving", "name": "desc", "type": "textarea", "rows": 2, "default_value": "Tot wel 40% goedkoper dan nieuw. Volledig gecontroleerd en direct leverbaar."},
+                        {"key": "field_hero_btn_primary", "label": "Primaire knop tekst", "name": "btn_primary", "type": "text", "default_value": "Bekijk smartphones"},
+                        {"key": "field_hero_btn_secondary", "label": "Secundaire knop tekst", "name": "btn_secondary", "type": "text", "default_value": "Bekijk alle deals"},
+                        {"key": "field_hero_benefits_heading", "label": "--- Rechts: Wie slim is ---", "name": "", "type": "tab"},
+                        {"key": "field_hero_benefits_title", "label": "Titel (regel 1)", "name": "benefits_title", "type": "text", "default_value": "Wie slim is,"},
+                        {"key": "field_hero_benefits_accent", "label": "Titel (regel 2, accent)", "name": "benefits_accent", "type": "text", "default_value": "betaalt minder."},
+                        {
+                            "key": "field_hero_benefits_items",
+                            "label": "Bulletpunten",
+                            "name": "benefits_items",
+                            "type": "repeater",
+                            "layout": "table",
+                            "button_label": "Punt toevoegen",
+                            "max": 6,
+                            "sub_fields": [{"key": "field_hero_benefits_item_text", "label": "Tekst", "name": "text", "type": "text"}]
+                        },
+                        {"key": "field_hero_weekdeal_heading", "label": "--- Rechts: Weekdeal ---", "name": "", "type": "tab"},
+                        {"key": "field_hero_weekdeal_title", "label": "Titel", "name": "weekdeal_title", "type": "text", "default_value": "Weekdeal 🔥"},
+                        {"key": "field_hero_weekdeal_product", "label": "Product", "name": "weekdeal_product", "type": "post_object", "post_type": ["product"], "return_format": "object", "instructions": "Selecteer een product. Naam, prijs, link en afbeelding worden automatisch getoond."},
+                        {"key": "field_hero_weekdeal_btn", "label": "Knoptekst", "name": "weekdeal_btn", "type": "text", "default_value": "Aanbieding bekijken"}
+                    ]
+                },
+                "layout_categories": {
+                    "key": "layout_categories",
+                    "name": "categories",
+                    "label": "Categorieblokken",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_categories_items",
+                            "label": "Blokken",
+                            "name": "items",
+                            "type": "repeater",
+                            "layout": "block",
+                            "button_label": "Blok toevoegen",
+                            "min": 1,
+                            "max": 8,
+                            "sub_fields": [
+                                {"key": "field_categories_item_style", "label": "Stijl", "name": "style", "type": "select", "choices": {"iphones": "iPhones (donker)", "ipads": "iPads (lichtblauw)", "apple": "Apple (roze)", "deals": "Deals (paars/blauw)"}},
+                                {"key": "field_categories_item_title", "label": "Titel", "name": "title", "type": "text", "placeholder": "Bijv. Refurbished iPhones"},
+                                {"key": "field_categories_item_image", "label": "Afbeelding", "name": "image", "type": "image", "return_format": "array", "preview_size": "medium"},
+                                {"key": "field_categories_item_btn", "label": "Knoptekst", "name": "button_text", "type": "text", "placeholder": "Bijv. Aanbod bekijken"},
+                                {"key": "field_categories_item_url", "label": "Link URL", "name": "url", "type": "url", "placeholder": "https://...", "instructions": "Laat leeg voor standaard shop/categorie link."}
+                            ]
+                        }
+                    ]
+                },
+                "layout_features": {
+                    "key": "layout_features",
+                    "name": "features",
+                    "label": "Waarom SlimGebruikt",
+                    "display": "block",
+                    "sub_fields": [
+                        {"key": "field_features_title", "label": "Sectie titel", "name": "title", "type": "text", "default_value": "Waarom slimgebruikt.nl"},
+                        {"key": "field_features_subtitle", "label": "Sectie subtekst", "name": "subtitle", "type": "textarea", "rows": 2, "default_value": "Bij Slimgebruikt.nl koop je refurbished elektronica zonder risico. Je bespaart slim, terwijl je kiest voor kwaliteit en zekerheid."},
+                        {
+                            "key": "field_features_items",
+                            "label": "Blokken",
+                            "name": "items",
+                            "type": "repeater",
+                            "layout": "block",
+                            "button_label": "Blok toevoegen",
+                            "min": 1,
+                            "max": 8,
+                            "sub_fields": [
+                                {"key": "field_features_item_icon", "label": "Icoon", "name": "icon", "type": "select", "choices": {"shield": "Schild (garantie)", "check": "Vergrootglas met vinkje", "truck": "Vrachtwagen", "gift": "Cadeaubox", "star": "Ster", "heart": "Hart", "clock": "Klok"}},
+                                {"key": "field_features_item_title", "label": "Titel", "name": "title", "type": "text", "placeholder": "Bijv. Garantie inbegrepen"},
+                                {"key": "field_features_item_text", "label": "Tekst", "name": "text", "type": "textarea", "rows": 3, "placeholder": "Beschrijving van dit voordeel..."}
+                            ]
+                        }
+                    ]
+                },
+                "layout_bestsellers": {
+                    "key": "layout_bestsellers",
+                    "name": "bestsellers",
+                    "label": "Bestsellers",
+                    "display": "block",
+                    "sub_fields": [{"key": "field_bestsellers_title", "label": "Titel", "name": "title", "type": "text", "default_value": "Bestsellers"}]
+                },
+                "layout_products": {
+                    "key": "layout_products",
+                    "name": "products",
+                    "label": "Producten (Refurbished iPhones)",
+                    "display": "block",
+                    "sub_fields": [
+                        {"key": "field_products_title", "label": "Titel", "name": "title", "type": "text", "default_value": "Refurbished iPhones"},
+                        {"key": "field_products_link_text", "label": "Link tekst", "name": "link_text", "type": "text", "default_value": "bekijk alle iphones"}
+                    ]
+                },
+                "layout_wysiwyg": {
+                    "key": "layout_wysiwyg",
+                    "name": "wysiwyg",
+                    "label": "Vrije tekst (WYSIWYG)",
+                    "display": "block",
+                    "sub_fields": [{"key": "field_wysiwyg_content", "label": "Inhoud", "name": "content", "type": "wysiwyg", "tabs": "all", "toolbar": "full", "media_upload": 1, "delay": 0}]
+                },
+                "layout_cta": {
+                    "key": "layout_cta",
+                    "name": "cta",
+                    "label": "Call-to-action blok",
+                    "display": "block",
+                    "sub_fields": [
+                        {"key": "field_cta_title", "label": "Titel", "name": "title", "type": "text"},
+                        {"key": "field_cta_text", "label": "Tekst", "name": "text", "type": "textarea", "rows": 3},
+                        {"key": "field_cta_btn", "label": "Knoptekst", "name": "button_text", "type": "text"},
+                        {"key": "field_cta_url", "label": "Knop link", "name": "url", "type": "url"}
+                    ]
+                },
+                "layout_spacer": {
+                    "key": "layout_spacer",
+                    "name": "spacer",
+                    "label": "Spatie/lege ruimte",
+                    "display": "block",
+                    "sub_fields": [{"key": "field_spacer_height", "label": "Hoogte (px)", "name": "height", "type": "number", "default_value": 40, "min": 0, "max": 200}]
+                },
+                "layout_image_text": {
+                    "key": "layout_image_text",
+                    "name": "image_text",
+                    "label": "Afbeelding + tekst",
+                    "display": "block",
+                    "sub_fields": [
+                        {"key": "field_image_text_image", "label": "Afbeelding", "name": "image", "type": "image", "return_format": "array"},
+                        {"key": "field_image_text_title", "label": "Titel", "name": "title", "type": "text"},
+                        {"key": "field_image_text_content", "label": "Tekst", "name": "content", "type": "wysiwyg"},
+                        {"key": "field_image_text_side", "label": "Afbeelding links of rechts?", "name": "image_side", "type": "select", "choices": {"left": "Links", "right": "Rechts"}}
+                    ]
                 }
-              ]
             },
-            {
-              "key": "field_hero_weekdeal_heading",
-              "label": "--- Rechts: Weekdeal ---",
-              "name": "",
-              "type": "tab"
-            },
-            {
-              "key": "field_hero_weekdeal_title",
-              "label": "Titel",
-              "name": "weekdeal_title",
-              "type": "text",
-              "default_value": "Weekdeal 🔥"
-            },
-            {
-              "key": "field_hero_weekdeal_product",
-              "label": "Product",
-              "name": "weekdeal_product",
-              "type": "post_object",
-              "post_type": ["product"],
-              "return_format": "object",
-              "instructions": "Selecteer een product. Naam, prijs, link en afbeelding worden automatisch getoond."
-            },
-            {
-              "key": "field_hero_weekdeal_btn",
-              "label": "Knoptekst",
-              "name": "weekdeal_btn",
-              "type": "text",
-              "default_value": "Aanbieding bekijken"
-            }
-          ]
-        },
-        "layout_categories": {
-          "key": "layout_categories",
-          "name": "categories",
-          "label": "Categorieblokken",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_categories_items",
-              "label": "Blokken",
-              "name": "items",
-              "type": "repeater",
-              "layout": "block",
-              "button_label": "Blok toevoegen",
-              "min": 1,
-              "max": 8,
-              "sub_fields": [
-                {
-                  "key": "field_categories_item_style",
-                  "label": "Stijl",
-                  "name": "style",
-                  "type": "select",
-                  "choices": {
-                    "iphones": "iPhones (donker)",
-                    "ipads": "iPads (lichtblauw)",
-                    "apple": "Apple (roze)",
-                    "deals": "Deals (paars/blauw)"
-                  }
-                },
-                {
-                  "key": "field_categories_item_title",
-                  "label": "Titel",
-                  "name": "title",
-                  "type": "text",
-                  "placeholder": "Bijv. Refurbished iPhones"
-                },
-                {
-                  "key": "field_categories_item_image",
-                  "label": "Afbeelding",
-                  "name": "image",
-                  "type": "image",
-                  "return_format": "array",
-                  "preview_size": "medium"
-                },
-                {
-                  "key": "field_categories_item_btn",
-                  "label": "Knoptekst",
-                  "name": "button_text",
-                  "type": "text",
-                  "placeholder": "Bijv. Aanbod bekijken"
-                },
-                {
-                  "key": "field_categories_item_url",
-                  "label": "Link URL",
-                  "name": "url",
-                  "type": "url",
-                  "placeholder": "https://...",
-                  "instructions": "Laat leeg voor standaard shop/categorie link."
-                }
-              ]
-            }
-          ]
-        },
-        "layout_features": {
-          "key": "layout_features",
-          "name": "features",
-          "label": "Waarom SlimGebruikt",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_features_title",
-              "label": "Sectie titel",
-              "name": "title",
-              "type": "text",
-              "default_value": "Waarom slimgebruikt.nl"
-            },
-            {
-              "key": "field_features_subtitle",
-              "label": "Sectie subtekst",
-              "name": "subtitle",
-              "type": "textarea",
-              "rows": 2,
-              "default_value": "Bij Slimgebruikt.nl koop je refurbished elektronica zonder risico. Je bespaart slim, terwijl je kiest voor kwaliteit en zekerheid."
-            },
-            {
-              "key": "field_features_items",
-              "label": "Blokken",
-              "name": "items",
-              "type": "repeater",
-              "layout": "block",
-              "button_label": "Blok toevoegen",
-              "min": 1,
-              "max": 8,
-              "sub_fields": [
-                {
-                  "key": "field_features_item_icon",
-                  "label": "Icoon",
-                  "name": "icon",
-                  "type": "select",
-                  "choices": {
-                    "shield": "Schild (garantie)",
-                    "check": "Vergrootglas met vinkje",
-                    "truck": "Vrachtwagen",
-                    "gift": "Cadeaubox",
-                    "star": "Ster",
-                    "heart": "Hart",
-                    "clock": "Klok"
-                  }
-                },
-                {
-                  "key": "field_features_item_title",
-                  "label": "Titel",
-                  "name": "title",
-                  "type": "text",
-                  "placeholder": "Bijv. Garantie inbegrepen"
-                },
-                {
-                  "key": "field_features_item_text",
-                  "label": "Tekst",
-                  "name": "text",
-                  "type": "textarea",
-                  "rows": 3,
-                  "placeholder": "Beschrijving van dit voordeel..."
-                }
-              ]
-            }
-          ]
-        },
-        "layout_bestsellers": {
-          "key": "layout_bestsellers",
-          "name": "bestsellers",
-          "label": "Bestsellers",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_bestsellers_title",
-              "label": "Titel",
-              "name": "title",
-              "type": "text",
-              "default_value": "Bestsellers"
-            }
-          ]
-        },
-        "layout_products": {
-          "key": "layout_products",
-          "name": "products",
-          "label": "Producten (Refurbished iPhones)",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_products_title",
-              "label": "Titel",
-              "name": "title",
-              "type": "text",
-              "default_value": "Refurbished iPhones"
-            },
-            {
-              "key": "field_products_link_text",
-              "label": "Link tekst",
-              "name": "link_text",
-              "type": "text",
-              "default_value": "bekijk alle iphones"
-            }
-          ]
-        },
-        "layout_wysiwyg": {
-          "key": "layout_wysiwyg",
-          "name": "wysiwyg",
-          "label": "Vrije tekst (WYSIWYG)",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_wysiwyg_content",
-              "label": "Inhoud",
-              "name": "content",
-              "type": "wysiwyg",
-              "tabs": "all",
-              "toolbar": "full",
-              "media_upload": 1,
-              "delay": 0
-            }
-          ]
-        },
-        "layout_cta": {
-          "key": "layout_cta",
-          "name": "cta",
-          "label": "Call-to-action blok",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_cta_title",
-              "label": "Titel",
-              "name": "title",
-              "type": "text"
-            },
-            {
-              "key": "field_cta_text",
-              "label": "Tekst",
-              "name": "text",
-              "type": "textarea",
-              "rows": 3
-            },
-            {
-              "key": "field_cta_btn",
-              "label": "Knoptekst",
-              "name": "button_text",
-              "type": "text"
-            },
-            {
-              "key": "field_cta_url",
-              "label": "Knop link",
-              "name": "url",
-              "type": "url"
-            }
-          ]
-        },
-        "layout_spacer": {
-          "key": "layout_spacer",
-          "name": "spacer",
-          "label": "Spatie/lege ruimte",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_spacer_height",
-              "label": "Hoogte (px)",
-              "name": "height",
-              "type": "number",
-              "default_value": 40,
-              "min": 0,
-              "max": 200
-            }
-          ]
-        },
-        "layout_image_text": {
-          "key": "layout_image_text",
-          "name": "image_text",
-          "label": "Afbeelding + tekst",
-          "display": "block",
-          "sub_fields": [
-            {
-              "key": "field_image_text_image",
-              "label": "Afbeelding",
-              "name": "image",
-              "type": "image",
-              "return_format": "array"
-            },
-            {
-              "key": "field_image_text_title",
-              "label": "Titel",
-              "name": "title",
-              "type": "text"
-            },
-            {
-              "key": "field_image_text_content",
-              "label": "Tekst",
-              "name": "content",
-              "type": "wysiwyg"
-            },
-            {
-              "key": "field_image_text_side",
-              "label": "Afbeelding links of rechts?",
-              "name": "image_side",
-              "type": "select",
-              "choices": { "left": "Links", "right": "Rechts" }
-            }
-          ]
+            "min": "",
+            "max": ""
         }
-      },
-      "min": "",
-      "max": ""
-    }
-  ],
-  "location": [
-    [{ "param": "page_type", "operator": "==", "value": "front_page" }]
-  ],
-  "menu_order": -1,
-  "position": "normal",
-  "modified": 1739782800
+    ],
+    "location": [[{"param": "page_type", "operator": "==", "value": "front_page"}]],
+    "menu_order": -1,
+    "position": "normal",
+    "modified": 1739782800
 }
