@@ -1,486 +1,179 @@
 ﻿{
-    "key": "group_theme_settings",
-    "title": "Theme-instellingen",
-    "location": [
-        [
-            {
-                "param": "options_page",
-                "operator": "==",
-                "value": "theme-settings"
-            }
-        ]
-    ],
-    "position": "normal",
-    "style": "default",
-    "label_placement": "top",
-    "instruction_placement": "label",
-    "hide_on_screen": [],
-    "description": "",
-    "show_in_rest": false,
-    "display_title": "",
-    "modified": 1739900100,
-    "fields": [
+  "key": "group_theme_settings",
+  "title": "Theme-instellingen",
+  "fields": [
+    {
+      "key": "field_options_weekdeal_tab",
+      "label": "Weekdeal",
+      "name": "",
+      "type": "tab"
+    },
+    {
+      "key": "field_options_weekdeal_end",
+      "label": "Countdown einddatum",
+      "name": "weekdeal_end_datetime",
+      "type": "date_time_picker",
+      "display_format": "d/m/Y H:i",
+      "return_format": "Y-m-d H:i:s",
+      "instructions": "Datum en tijd waarop de weekdeal afloopt."
+    },
+    {
+      "key": "field_options_footer_tab",
+      "label": "Footer",
+      "name": "",
+      "type": "tab"
+    },
+    {
+      "key": "field_options_footer_phone",
+      "label": "Telefoonnummer",
+      "name": "footer_phone",
+      "type": "text",
+      "default_value": "06 1234567"
+    },
+    {
+      "key": "field_options_footer_email",
+      "label": "E-mailadres",
+      "name": "footer_email",
+      "type": "email",
+      "default_value": "info@slimgebruikt.nl"
+    },
+    {
+      "key": "field_options_footer_addr_1",
+      "label": "Adres (regel 1)",
+      "name": "footer_addr_1",
+      "type": "text",
+      "default_value": "Infostraat 12"
+    },
+    {
+      "key": "field_options_footer_addr_2",
+      "label": "Adres (regel 2)",
+      "name": "footer_addr_2",
+      "type": "text",
+      "default_value": "1234 AB, Hengelo"
+    },
+    {
+      "key": "field_options_footer_addr_3",
+      "label": "Adres (regel 3)",
+      "name": "footer_addr_3",
+      "type": "text",
+      "default_value": "Nederland"
+    },
+    {
+      "key": "field_options_footer_hours",
+      "label": "Openingsuren tekst",
+      "name": "footer_hours",
+      "type": "text",
+      "default_value": "Geopend tot 17:00"
+    },
+    {
+      "key": "field_options_promo_tab",
+      "label": "Promo-bar (header)",
+      "name": "",
+      "type": "tab"
+    },
+    {
+      "key": "field_options_promo_items",
+      "label": "Promo-teksten",
+      "name": "promo_texts",
+      "type": "repeater",
+      "layout": "table",
+      "button_label": "Tekst toevoegen",
+      "sub_fields": [
         {
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0,
-            "selected": 0,
-            "key": "field_options_weekdeal_tab",
-            "label": "Weekdeal",
-            "name": ""
-        },
-        {
-            "aria-label": "",
-            "type": "date_time_picker",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "display_format": "d\/m\/Y H:i",
-            "return_format": "Y-m-d H:i:s",
-            "first_day": 1,
-            "default_to_current_date": 0,
-            "key": "field_options_weekdeal_end",
-            "label": "Countdown einddatum",
-            "name": "weekdeal_end_datetime"
-        },
-        {
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0,
-            "selected": 0,
-            "key": "field_options_footer_tab",
-            "label": "Footer",
-            "name": ""
-        },
-        {
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "06 1234567",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "key": "field_options_footer_phone",
-            "label": "Telefoonnummer",
-            "name": "footer_phone"
-        },
-        {
-            "aria-label": "",
-            "type": "email",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "info@slimgebruikt.nl",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "key": "field_options_footer_email",
-            "label": "E-mailadres",
-            "name": "footer_email"
-        },
-        {
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Infostraat 12",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "key": "field_options_footer_addr_1",
-            "label": "Adres (regel 1)",
-            "name": "footer_addr_1"
-        },
-        {
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "1234 AB, Hengelo",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "key": "field_options_footer_addr_2",
-            "label": "Adres (regel 2)",
-            "name": "footer_addr_2"
-        },
-        {
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Nederland",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "key": "field_options_footer_addr_3",
-            "label": "Adres (regel 3)",
-            "name": "footer_addr_3"
-        },
-        {
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Geopend tot 17:00",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "key": "field_options_footer_hours",
-            "label": "Openingsuren tekst",
-            "name": "footer_hours"
-        },
-        {
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0,
-            "selected": 0,
-            "key": "field_options_promo_tab",
-            "label": "Promo-bar (header)",
-            "name": ""
-        },
-        {
-            "aria-label": "",
-            "type": "repeater",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "table",
-            "button_label": "Tekst toevoegen",
-            "min": 0,
-            "max": 0,
-            "rows_per_page": 20,
-            "collapsed": "",
-            "acfe_repeater_stylised_button": 0,
-            "key": "field_options_promo_items",
-            "label": "Promo-teksten",
-            "name": "promo_texts",
-            "sub_fields": [
-                {
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": false,
-                    "conditional_logic": false,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "key": "field_options_promo_text",
-                    "label": "Tekst",
-                    "name": "text"
-                }
-            ]
-        },
-        {
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0,
-            "selected": 0,
-            "key": "field_options_gallery_tab",
-            "label": "Productgallery",
-            "name": ""
-        },
-        {
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "24 maanden garantie",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "key": "field_options_gallery_garantie",
-            "label": "Garantie-tag",
-            "name": "product_gallery_garantie"
-        },
-        {
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Professioneel refurbished",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "key": "field_options_gallery_refurbished",
-            "label": "Refurbished tekst",
-            "name": "product_gallery_refurbished"
-        },
-        {
-            "aria-label": "",
-            "type": "number",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": 5,
-            "min": 0,
-            "max": 5,
-            "step": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "key": "field_options_gallery_rating",
-            "label": "Sterrenrating (1-5)",
-            "name": "product_gallery_rating"
-        },
-        {
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Webshop Trustmark",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "key": "field_options_gallery_trustmark_1",
-            "label": "Trustmark 1",
-            "name": "product_gallery_trustmark_1"
-        },
-        {
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Webshop Keurmerk",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "key": "field_options_gallery_trustmark_2",
-            "label": "Trustmark 2",
-            "name": "product_gallery_trustmark_2"
-        },
-        {
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0,
-            "selected": 0,
-            "key": "field_options_payment_tab",
-            "label": "Betalingsiconen",
-            "name": ""
-        },
-        {
-            "aria-label": "",
-            "type": "repeater",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "button_label": "Icoon toevoegen",
-            "min": 0,
-            "max": 0,
-            "rows_per_page": 20,
-            "collapsed": "",
-            "acfe_repeater_stylised_button": 0,
-            "key": "field_options_payment_icons",
-            "label": "Betalingsiconen (productpagina)",
-            "name": "payment_icons",
-            "sub_fields": [
-                {
-                    "aria-label": "",
-                    "type": "image",
-                    "instructions": "",
-                    "required": false,
-                    "conditional_logic": false,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array",
-                    "preview_size": "thumbnail",
-                    "library": "all",
-                    "min_width": 0,
-                    "min_height": 0,
-                    "min_size": 0,
-                    "max_width": 0,
-                    "max_height": 0,
-                    "max_size": 0,
-                    "mime_types": "",
-                    "uploader": "",
-                    "acfe_thumbnail": 0,
-                    "key": "field_payment_icon_image",
-                    "label": "Afbeelding",
-                    "name": "image"
-                },
-                {
-                    "aria-label": "",
-                    "type": "url",
-                    "instructions": "",
-                    "required": false,
-                    "conditional_logic": false,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "key": "field_payment_icon_link",
-                    "label": "Link (optioneel)",
-                    "name": "link"
-                },
-                {
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": false,
-                    "conditional_logic": false,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "key": "field_payment_icon_alt",
-                    "label": "Alt-tekst",
-                    "name": "alt"
-                }
-            ]
+          "key": "field_options_promo_text",
+          "label": "Tekst",
+          "name": "text",
+          "type": "text"
         }
-    ]
+      ]
+    },
+    {
+      "key": "field_options_gallery_tab",
+      "label": "Productgallery",
+      "name": "",
+      "type": "tab"
+    },
+    {
+      "key": "field_options_gallery_garantie",
+      "label": "Garantie-tag",
+      "name": "product_gallery_garantie",
+      "type": "text",
+      "default_value": "24 maanden garantie"
+    },
+    {
+      "key": "field_options_gallery_refurbished",
+      "label": "Refurbished tekst",
+      "name": "product_gallery_refurbished",
+      "type": "text",
+      "default_value": "Professioneel refurbished"
+    },
+    {
+      "key": "field_options_gallery_rating",
+      "label": "Sterrenrating (1-5)",
+      "name": "product_gallery_rating",
+      "type": "number",
+      "default_value": 5,
+      "min": 0,
+      "max": 5
+    },
+    {
+      "key": "field_options_gallery_trustmark_1",
+      "label": "Trustmark 1",
+      "name": "product_gallery_trustmark_1",
+      "type": "text",
+      "default_value": "Webshop Trustmark"
+    },
+    {
+      "key": "field_options_gallery_trustmark_2",
+      "label": "Trustmark 2",
+      "name": "product_gallery_trustmark_2",
+      "type": "text",
+      "default_value": "Webshop Keurmerk"
+    },
+    {
+      "key": "field_options_payment_tab",
+      "label": "Betalingsiconen",
+      "name": "",
+      "type": "tab"
+    },
+    {
+      "key": "field_options_payment_icons",
+      "label": "Betalingsiconen (productpagina)",
+      "name": "payment_icons",
+      "type": "repeater",
+      "layout": "block",
+      "button_label": "Icoon toevoegen",
+      "instructions": "Toon op productpagina onder de retour-accordion.",
+      "sub_fields": [
+        {
+          "key": "field_payment_icon_image",
+          "label": "Afbeelding",
+          "name": "image",
+          "type": "image",
+          "return_format": "array",
+          "preview_size": "thumbnail",
+          "library": "all"
+        },
+        {
+          "key": "field_payment_icon_link",
+          "label": "Link (optioneel)",
+          "name": "link",
+          "type": "url"
+        },
+        {
+          "key": "field_payment_icon_alt",
+          "label": "Alt-tekst",
+          "name": "alt",
+          "type": "text",
+          "instructions": "Toegankelijkheid"
+        }
+      ]
+    }
+  ],
+  "location": [
+    [{ "param": "options_page", "operator": "==", "value": "theme-settings" }]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "modified": 1739900100
 }
