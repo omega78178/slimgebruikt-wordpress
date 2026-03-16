@@ -1,21 +1,99 @@
 @media screen and (min-width: 768px) {
+  .col2-set {
+    .form-row-first {
+      float: left;
+      margin-right: $columns__margin;
+    }
 
-	.col2-set {
+    .form-row-last {
+      float: right;
+      margin-right: 0;
+    }
 
-		.form-row-first {
-			float: left;
-			margin-right: $columns__margin;
-		}
+    .form-row-first,
+    .form-row-last {
+      @include column-width(2);
+    }
+  }
+}
 
-		.form-row-last {
-			float: right;
-			margin-right: 0;
-		}
+// Plaats bestelling / Place order button
+.wc-block-components-checkout-place-order-button,
+#place_order {
+  background-color: $color__dark-blue;
+  color: $color__white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.875em 1.5em;
+  font-family: $font__main;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease;
+  width: auto;
+  display: block;
+  margin-left: auto;
+  text-align: center;
 
-		.form-row-first,
-		.form-row-last {
+  &:hover,
+  &:focus {
+    background-color: darken($color__dark-blue, 8%);
+    color: $color__white;
+  }
 
-			@include column-width(2);
-		}
-	}
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+// PERFORMANCE: Totals Calculating State
+// Visuele feedback terwijl subtotaal, verzendkosten en btw worden berekend
+
+.wc-block-components-order-summary {
+  &.is-calculating {
+    opacity: 0.7;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+      );
+      animation: shimmer 1.5s infinite;
+      pointer-events: none;
+    }
+
+    .wc-block-components-order-summary-item {
+      animation: pulse-opacity 1.5s ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes pulse-opacity {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
 }

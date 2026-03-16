@@ -1,16 +1,245 @@
 {
     "key": "group_product_mobistock",
     "title": "Product extra",
-    "fields": [
-        {"key": "field_product_badge", "label": "Badge", "name": "product_badge", "type": "text", "placeholder": "Bijv. Nieuw, Sale"},
-        {"key": "field_product_subtitle", "label": "Subtitle", "name": "product_subtitle", "type": "text"},
-        {"key": "field_product_keurmerk", "label": "Keurmerk Refurbished tonen", "name": "product_keurmerk_refurbished", "type": "true_false", "default_value": 1, "ui": 1},
-        {"key": "field_product_about", "label": "Over-tekst (overschrijft beschrijving)", "name": "product_about_text", "type": "wysiwyg"},
-        {"key": "field_product_specs", "label": "Technische specificaties", "name": "product_specs", "type": "repeater", "layout": "table", "button_label": "Specificatie toevoegen", "sub_fields": [{"key": "field_product_spec_label", "label": "Label", "name": "label", "type": "text"}, {"key": "field_product_spec_value", "label": "Waarde", "name": "value", "type": "text"}]},
-        {"key": "field_conditie_uitleg", "label": "Conditie uitleg", "name": "conditie_uitleg", "type": "repeater", "layout": "block", "button_label": "Conditie toevoegen", "instructions": "Pas de uitleg per conditie aan. Leeg = standaardtekst.", "sub_fields": [{"key": "field_conditie_uitleg_slug", "label": "Conditie", "name": "conditie", "type": "select", "choices": {"goed": "Goed", "zeer-goed": "Zeer goed", "premium": "Premium", "zo-goed-als-nieuw": "Zo goed als nieuw"}, "required": 1}, {"key": "field_conditie_uitleg_tekst", "label": "Uitleg", "name": "uitleg", "type": "textarea", "rows": 4}]}
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "product"
+            }
+        ]
     ],
-    "location": [[{"param": "post_type", "operator": "==", "value": "product"}]],
-    "menu_order": 0,
     "position": "normal",
-    "modified": 1739870000
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [],
+    "description": "",
+    "show_in_rest": false,
+    "display_title": "",
+    "modified": 1739870000,
+    "fields": [
+        {
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placeholder": "Bijv. Nieuw, Sale",
+            "default_value": "",
+            "maxlength": "",
+            "prepend": "",
+            "append": "",
+            "key": "field_product_badge",
+            "label": "Badge",
+            "name": "product_badge"
+        },
+        {
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "key": "field_product_subtitle",
+            "label": "Subtitle",
+            "name": "product_subtitle"
+        },
+        {
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "ui": 1,
+            "message": "",
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "key": "field_product_keurmerk",
+            "label": "Keurmerk Refurbished tonen",
+            "name": "product_keurmerk_refurbished"
+        },
+        {
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "default_value": "",
+            "delay": 0,
+            "key": "field_product_about",
+            "label": "Over-tekst (overschrijft beschrijving)",
+            "name": "product_about_text"
+        },
+        {
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "button_label": "Specificatie toevoegen",
+            "min": 0,
+            "max": 0,
+            "rows_per_page": 20,
+            "collapsed": "",
+            "acfe_repeater_stylised_button": 0,
+            "key": "field_product_specs",
+            "label": "Technische specificaties",
+            "name": "product_specs",
+            "sub_fields": [
+                {
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "key": "field_product_spec_label",
+                    "label": "Label",
+                    "name": "label"
+                },
+                {
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "key": "field_product_spec_value",
+                    "label": "Waarde",
+                    "name": "value"
+                }
+            ]
+        },
+        {
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "Pas de uitleg per conditie aan. Leeg = standaardtekst.",
+            "required": false,
+            "conditional_logic": false,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "button_label": "Conditie toevoegen",
+            "min": 0,
+            "max": 0,
+            "rows_per_page": 20,
+            "collapsed": "",
+            "acfe_repeater_stylised_button": 0,
+            "key": "field_conditie_uitleg",
+            "label": "Conditie uitleg",
+            "name": "conditie_uitleg",
+            "sub_fields": [
+                {
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "goed": "Goed",
+                        "zeer-goed": "Zeer goed",
+                        "premium": "Premium",
+                        "zo-goed-als-nieuw": "Zo goed als nieuw"
+                    },
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "default_value": false,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
+                    "return_format": "value",
+                    "create_options": 0,
+                    "save_options": 0,
+                    "allow_custom": 0,
+                    "search_placeholder": "",
+                    "key": "field_conditie_uitleg_slug",
+                    "label": "Conditie",
+                    "name": "conditie"
+                },
+                {
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": false,
+                    "conditional_logic": false,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "rows": 4,
+                    "default_value": "",
+                    "new_lines": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "acfe_textarea_code": 0,
+                    "key": "field_conditie_uitleg_tekst",
+                    "label": "Uitleg",
+                    "name": "uitleg"
+                }
+            ]
+        }
+    ]
 }

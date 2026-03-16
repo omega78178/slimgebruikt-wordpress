@@ -6,8 +6,8 @@ WooCommerce styles override
 
 // WooCommerce color variables (Mobistock)
 $woocommerce__color-error: #e2401c;
-$woocommerce__color-success: #8AEA92;
-$woocommerce__color-info: #4BC9F1;
+$woocommerce__color-success: #8aea92;
+$woocommerce__color-info: #4bc9f1;
 
 // Import variables and mixins
 @import "abstracts/abstracts";
@@ -36,6 +36,11 @@ $woocommerce__color-info: #4BC9F1;
  * Checkout
  */
 @import "plugins/woocommerce/checkout";
+
+/**
+ * Cart
+ */
+@import "plugins/woocommerce/cart";
 
 /**
  * General WooCommerce components
