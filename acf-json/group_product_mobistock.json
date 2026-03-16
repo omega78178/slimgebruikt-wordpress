@@ -1,4 +1,4 @@
-{
+﻿{
     "key": "group_product_mobistock",
     "title": "Product extra",
     "location": [
@@ -167,7 +167,7 @@
         {
             "aria-label": "",
             "type": "repeater",
-            "instructions": "Pas de uitleg per conditie aan. Leeg = standaardtekst.",
+            "instructions": "",
             "required": false,
             "conditional_logic": false,
             "wrapper": {

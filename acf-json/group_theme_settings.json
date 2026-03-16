@@ -1,4 +1,4 @@
-{
+﻿{
     "key": "group_theme_settings",
     "title": "Theme-instellingen",
     "location": [
@@ -41,7 +41,7 @@
         {
             "aria-label": "",
             "type": "date_time_picker",
-            "instructions": "Datum en tijd waarop de weekdeal afloopt.",
+            "instructions": "",
             "required": false,
             "conditional_logic": false,
             "wrapper": {
@@ -397,7 +397,7 @@
         {
             "aria-label": "",
             "type": "repeater",
-            "instructions": "Toon op productpagina onder de retour-accordion.",
+            "instructions": "",
             "required": false,
             "conditional_logic": false,
             "wrapper": {
@@ -463,7 +463,7 @@
                 {
                     "aria-label": "",
                     "type": "text",
-                    "instructions": "Toegankelijkheid",
+                    "instructions": "",
                     "required": false,
                     "conditional_logic": false,
                     "wrapper": {

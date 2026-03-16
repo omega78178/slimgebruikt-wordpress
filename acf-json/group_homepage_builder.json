@@ -1,1083 +1,399 @@
-{
-    "key": "group_homepage_builder",
-    "title": "Homepage secties",
-    "location": [
-        [
+﻿{
+  "key": "group_homepage_builder",
+  "title": "Homepage secties",
+  "fields": [
+    {
+      "key": "field_homepage_sections",
+      "label": "Secties",
+      "name": "homepage_sections",
+      "type": "flexible_content",
+      "button_label": "Sectie toevoegen",
+      "layouts": {
+        "layout_hero": {
+          "key": "layout_hero",
+          "name": "hero",
+          "label": "Hero",
+          "display": "block",
+          "sub_fields": [
             {
-                "param": "page_type",
-                "operator": "==",
-                "value": "front_page"
-            }
-        ]
-    ],
-    "position": "normal",
-    "style": "default",
-    "label_placement": "top",
-    "instruction_placement": "label",
-    "hide_on_screen": [],
-    "description": "",
-    "show_in_rest": false,
-    "display_title": "",
-    "modified": 1739782800,
-    "fields": [
-        {
-            "aria-label": "",
-            "type": "flexible_content",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
+              "key": "field_hero_tagline",
+              "label": "Tagline",
+              "name": "tagline",
+              "type": "text",
+              "default_value": "Slim gebruikt. Slim bespaard."
             },
-            "button_label": "Sectie toevoegen",
-            "layouts": [
+            {
+              "key": "field_hero_title",
+              "label": "Titel",
+              "name": "title",
+              "type": "text",
+              "default_value": "Refurbished smartphones, tablets & gadgets met garantie."
+            },
+            {
+              "key": "field_hero_desc",
+              "label": "Beschrijving",
+              "name": "desc",
+              "type": "textarea",
+              "rows": 2,
+              "default_value": "Tot wel 40% goedkoper dan nieuw. Volledig gecontroleerd en direct leverbaar."
+            },
+            {
+              "key": "field_hero_btn_primary",
+              "label": "Primaire knop tekst",
+              "name": "btn_primary",
+              "type": "text",
+              "default_value": "Bekijk smartphones"
+            },
+            {
+              "key": "field_hero_btn_secondary",
+              "label": "Secundaire knop tekst",
+              "name": "btn_secondary",
+              "type": "text",
+              "default_value": "Bekijk alle deals"
+            },
+            {
+              "key": "field_hero_benefits_heading",
+              "label": "--- Rechts: Wie slim is ---",
+              "name": "",
+              "type": "tab"
+            },
+            {
+              "key": "field_hero_benefits_title",
+              "label": "Titel (regel 1)",
+              "name": "benefits_title",
+              "type": "text",
+              "default_value": "Wie slim is,"
+            },
+            {
+              "key": "field_hero_benefits_accent",
+              "label": "Titel (regel 2, accent)",
+              "name": "benefits_accent",
+              "type": "text",
+              "default_value": "betaalt minder."
+            },
+            {
+              "key": "field_hero_benefits_items",
+              "label": "Bulletpunten",
+              "name": "benefits_items",
+              "type": "repeater",
+              "layout": "table",
+              "button_label": "Punt toevoegen",
+              "max": 6,
+              "sub_fields": [
                 {
-                    "key": "layout_hero",
-                    "name": "hero",
-                    "label": "Hero",
-                    "display": "block",
-                    "min": "",
-                    "max": "",
-                    "acfe_flexible_render_template": false,
-                    "acfe_flexible_render_style": false,
-                    "acfe_flexible_render_script": false,
-                    "acfe_flexible_thumbnail": false,
-                    "acfe_flexible_settings": false,
-                    "acfe_flexible_settings_size": false,
-                    "acfe_flexible_modal_edit_size": false,
-                    "acfe_flexible_category": false,
-                    "sub_fields": [
-                        {
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "Slim gebruikt. Slim bespaard.",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "key": "field_hero_tagline",
-                            "label": "Tagline",
-                            "name": "tagline"
-                        },
-                        {
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "Refurbished smartphones, tablets & gadgets met garantie.",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "key": "field_hero_title",
-                            "label": "Titel",
-                            "name": "title"
-                        },
-                        {
-                            "aria-label": "",
-                            "type": "textarea",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "rows": 2,
-                            "default_value": "Tot wel 40% goedkoper dan nieuw. Volledig gecontroleerd en direct leverbaar.",
-                            "new_lines": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "acfe_textarea_code": 0,
-                            "key": "field_hero_desc",
-                            "label": "Beschrijving",
-                            "name": "desc"
-                        },
-                        {
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "Bekijk smartphones",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "key": "field_hero_btn_primary",
-                            "label": "Primaire knop tekst",
-                            "name": "btn_primary"
-                        },
-                        {
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "Bekijk alle deals",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "key": "field_hero_btn_secondary",
-                            "label": "Secundaire knop tekst",
-                            "name": "btn_secondary"
-                        },
-                        {
-                            "aria-label": "",
-                            "type": "tab",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "placement": "top",
-                            "endpoint": 0,
-                            "selected": 0,
-                            "key": "field_hero_benefits_heading",
-                            "label": "--- Rechts: Wie slim is ---",
-                            "name": ""
-                        },
-                        {
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "Wie slim is,",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "key": "field_hero_benefits_title",
-                            "label": "Titel (regel 1)",
-                            "name": "benefits_title"
-                        },
-                        {
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "betaalt minder.",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "key": "field_hero_benefits_accent",
-                            "label": "Titel (regel 2, accent)",
-                            "name": "benefits_accent"
-                        },
-                        {
-                            "aria-label": "",
-                            "type": "repeater",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "layout": "table",
-                            "button_label": "Punt toevoegen",
-                            "max": 6,
-                            "min": 0,
-                            "rows_per_page": 20,
-                            "collapsed": "",
-                            "acfe_repeater_stylised_button": 0,
-                            "key": "field_hero_benefits_items",
-                            "label": "Bulletpunten",
-                            "name": "benefits_items",
-                            "sub_fields": [
-                                {
-                                    "aria-label": "",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": false,
-                                    "conditional_logic": false,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "maxlength": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "key": "field_hero_benefits_item_text",
-                                    "label": "Tekst",
-                                    "name": "text"
-                                }
-                            ]
-                        },
-                        {
-                            "aria-label": "",
-                            "type": "tab",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "placement": "top",
-                            "endpoint": 0,
-                            "selected": 0,
-                            "key": "field_hero_weekdeal_heading",
-                            "label": "--- Rechts: Weekdeal ---",
-                            "name": ""
-                        },
-                        {
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "Weekdeal 🔥",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "key": "field_hero_weekdeal_title",
-                            "label": "Titel",
-                            "name": "weekdeal_title"
-                        },
-                        {
-                            "aria-label": "",
-                            "type": "post_object",
-                            "instructions": "Selecteer een product. Naam, prijs, link en afbeelding worden automatisch getoond.",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "post_type": [
-                                "product"
-                            ],
-                            "return_format": "object",
-                            "taxonomy": [],
-                            "allow_null": 0,
-                            "multiple": 0,
-                            "ui": 1,
-                            "bidirectional_target": [],
-                            "save_custom": 0,
-                            "save_post_type": "",
-                            "save_post_status": "",
-                            "key": "field_hero_weekdeal_product",
-                            "label": "Product",
-                            "name": "weekdeal_product"
-                        },
-                        {
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "Aanbieding bekijken",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "key": "field_hero_weekdeal_btn",
-                            "label": "Knoptekst",
-                            "name": "weekdeal_btn"
-                        }
-                    ]
-                },
-                {
-                    "key": "layout_categories",
-                    "name": "categories",
-                    "label": "Categorieblokken",
-                    "display": "block",
-                    "min": "",
-                    "max": "",
-                    "acfe_flexible_render_template": false,
-                    "acfe_flexible_render_style": false,
-                    "acfe_flexible_render_script": false,
-                    "acfe_flexible_thumbnail": false,
-                    "acfe_flexible_settings": false,
-                    "acfe_flexible_settings_size": false,
-                    "acfe_flexible_modal_edit_size": false,
-                    "acfe_flexible_category": false,
-                    "sub_fields": [
-                        {
-                            "aria-label": "",
-                            "type": "repeater",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "layout": "block",
-                            "button_label": "Blok toevoegen",
-                            "min": 1,
-                            "max": 8,
-                            "rows_per_page": 20,
-                            "collapsed": "",
-                            "acfe_repeater_stylised_button": 0,
-                            "key": "field_categories_items",
-                            "label": "Blokken",
-                            "name": "items",
-                            "sub_fields": [
-                                {
-                                    "aria-label": "",
-                                    "type": "select",
-                                    "instructions": "",
-                                    "required": false,
-                                    "conditional_logic": false,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "choices": {
-                                        "iphones": "iPhones (donker)",
-                                        "ipads": "iPads (lichtblauw)",
-                                        "apple": "Apple (roze)",
-                                        "deals": "Deals (paars\/blauw)"
-                                    },
-                                    "multiple": 0,
-                                    "allow_null": 0,
-                                    "default_value": false,
-                                    "ui": 0,
-                                    "ajax": 0,
-                                    "placeholder": "",
-                                    "return_format": "value",
-                                    "create_options": 0,
-                                    "save_options": 0,
-                                    "allow_custom": 0,
-                                    "search_placeholder": "",
-                                    "key": "field_categories_item_style",
-                                    "label": "Stijl",
-                                    "name": "style"
-                                },
-                                {
-                                    "aria-label": "",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": false,
-                                    "conditional_logic": false,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "placeholder": "Bijv. Refurbished iPhones",
-                                    "default_value": "",
-                                    "maxlength": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "key": "field_categories_item_title",
-                                    "label": "Titel",
-                                    "name": "title"
-                                },
-                                {
-                                    "aria-label": "",
-                                    "type": "image",
-                                    "instructions": "",
-                                    "required": false,
-                                    "conditional_logic": false,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "return_format": "array",
-                                    "preview_size": "medium",
-                                    "library": "all",
-                                    "min_width": 0,
-                                    "min_height": 0,
-                                    "min_size": 0,
-                                    "max_width": 0,
-                                    "max_height": 0,
-                                    "max_size": 0,
-                                    "mime_types": "",
-                                    "uploader": "",
-                                    "acfe_thumbnail": 0,
-                                    "key": "field_categories_item_image",
-                                    "label": "Afbeelding",
-                                    "name": "image"
-                                },
-                                {
-                                    "aria-label": "",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": false,
-                                    "conditional_logic": false,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "placeholder": "Bijv. Aanbod bekijken",
-                                    "default_value": "",
-                                    "maxlength": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "key": "field_categories_item_btn",
-                                    "label": "Knoptekst",
-                                    "name": "button_text"
-                                },
-                                {
-                                    "aria-label": "",
-                                    "type": "url",
-                                    "instructions": "Laat leeg voor standaard shop\/categorie link.",
-                                    "required": false,
-                                    "conditional_logic": false,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "placeholder": "https:\/\/...",
-                                    "default_value": "",
-                                    "key": "field_categories_item_url",
-                                    "label": "Link URL",
-                                    "name": "url"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "key": "layout_features",
-                    "name": "features",
-                    "label": "Waarom SlimGebruikt",
-                    "display": "block",
-                    "min": "",
-                    "max": "",
-                    "acfe_flexible_render_template": false,
-                    "acfe_flexible_render_style": false,
-                    "acfe_flexible_render_script": false,
-                    "acfe_flexible_thumbnail": false,
-                    "acfe_flexible_settings": false,
-                    "acfe_flexible_settings_size": false,
-                    "acfe_flexible_modal_edit_size": false,
-                    "acfe_flexible_category": false,
-                    "sub_fields": [
-                        {
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "Waarom slimgebruikt.nl",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "key": "field_features_title",
-                            "label": "Sectie titel",
-                            "name": "title"
-                        },
-                        {
-                            "aria-label": "",
-                            "type": "textarea",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "rows": 2,
-                            "default_value": "Bij Slimgebruikt.nl koop je refurbished elektronica zonder risico. Je bespaart slim, terwijl je kiest voor kwaliteit en zekerheid.",
-                            "new_lines": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "acfe_textarea_code": 0,
-                            "key": "field_features_subtitle",
-                            "label": "Sectie subtekst",
-                            "name": "subtitle"
-                        },
-                        {
-                            "aria-label": "",
-                            "type": "repeater",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "layout": "block",
-                            "button_label": "Blok toevoegen",
-                            "min": 1,
-                            "max": 8,
-                            "rows_per_page": 20,
-                            "collapsed": "",
-                            "acfe_repeater_stylised_button": 0,
-                            "key": "field_features_items",
-                            "label": "Blokken",
-                            "name": "items",
-                            "sub_fields": [
-                                {
-                                    "aria-label": "",
-                                    "type": "select",
-                                    "instructions": "",
-                                    "required": false,
-                                    "conditional_logic": false,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "choices": {
-                                        "shield": "Schild (garantie)",
-                                        "check": "Vergrootglas met vinkje",
-                                        "truck": "Vrachtwagen",
-                                        "gift": "Cadeaubox",
-                                        "star": "Ster",
-                                        "heart": "Hart",
-                                        "clock": "Klok"
-                                    },
-                                    "multiple": 0,
-                                    "allow_null": 0,
-                                    "default_value": false,
-                                    "ui": 0,
-                                    "ajax": 0,
-                                    "placeholder": "",
-                                    "return_format": "value",
-                                    "create_options": 0,
-                                    "save_options": 0,
-                                    "allow_custom": 0,
-                                    "search_placeholder": "",
-                                    "key": "field_features_item_icon",
-                                    "label": "Icoon",
-                                    "name": "icon"
-                                },
-                                {
-                                    "aria-label": "",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": false,
-                                    "conditional_logic": false,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "placeholder": "Bijv. Garantie inbegrepen",
-                                    "default_value": "",
-                                    "maxlength": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "key": "field_features_item_title",
-                                    "label": "Titel",
-                                    "name": "title"
-                                },
-                                {
-                                    "aria-label": "",
-                                    "type": "textarea",
-                                    "instructions": "",
-                                    "required": false,
-                                    "conditional_logic": false,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "rows": 3,
-                                    "placeholder": "Beschrijving van dit voordeel...",
-                                    "default_value": "",
-                                    "new_lines": "",
-                                    "maxlength": "",
-                                    "acfe_textarea_code": 0,
-                                    "key": "field_features_item_text",
-                                    "label": "Tekst",
-                                    "name": "text"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "key": "layout_bestsellers",
-                    "name": "bestsellers",
-                    "label": "Bestsellers",
-                    "display": "block",
-                    "min": "",
-                    "max": "",
-                    "acfe_flexible_render_template": false,
-                    "acfe_flexible_render_style": false,
-                    "acfe_flexible_render_script": false,
-                    "acfe_flexible_thumbnail": false,
-                    "acfe_flexible_settings": false,
-                    "acfe_flexible_settings_size": false,
-                    "acfe_flexible_modal_edit_size": false,
-                    "acfe_flexible_category": false,
-                    "sub_fields": [
-                        {
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "Bestsellers",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "key": "field_bestsellers_title",
-                            "label": "Titel",
-                            "name": "title"
-                        }
-                    ]
-                },
-                {
-                    "key": "layout_products",
-                    "name": "products",
-                    "label": "Producten (Refurbished iPhones)",
-                    "display": "block",
-                    "min": "",
-                    "max": "",
-                    "acfe_flexible_render_template": false,
-                    "acfe_flexible_render_style": false,
-                    "acfe_flexible_render_script": false,
-                    "acfe_flexible_thumbnail": false,
-                    "acfe_flexible_settings": false,
-                    "acfe_flexible_settings_size": false,
-                    "acfe_flexible_modal_edit_size": false,
-                    "acfe_flexible_category": false,
-                    "sub_fields": [
-                        {
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "Refurbished iPhones",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "key": "field_products_title",
-                            "label": "Titel",
-                            "name": "title"
-                        },
-                        {
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "bekijk alle iphones",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "key": "field_products_link_text",
-                            "label": "Link tekst",
-                            "name": "link_text"
-                        }
-                    ]
-                },
-                {
-                    "key": "layout_wysiwyg",
-                    "name": "wysiwyg",
-                    "label": "Vrije tekst (WYSIWYG)",
-                    "display": "block",
-                    "min": "",
-                    "max": "",
-                    "acfe_flexible_render_template": false,
-                    "acfe_flexible_render_style": false,
-                    "acfe_flexible_render_script": false,
-                    "acfe_flexible_thumbnail": false,
-                    "acfe_flexible_settings": false,
-                    "acfe_flexible_settings_size": false,
-                    "acfe_flexible_modal_edit_size": false,
-                    "acfe_flexible_category": false,
-                    "sub_fields": [
-                        {
-                            "aria-label": "",
-                            "type": "wysiwyg",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "tabs": "all",
-                            "toolbar": "full",
-                            "media_upload": 1,
-                            "delay": 0,
-                            "default_value": "",
-                            "key": "field_wysiwyg_content",
-                            "label": "Inhoud",
-                            "name": "content"
-                        }
-                    ]
-                },
-                {
-                    "key": "layout_cta",
-                    "name": "cta",
-                    "label": "Call-to-action blok",
-                    "display": "block",
-                    "min": "",
-                    "max": "",
-                    "acfe_flexible_render_template": false,
-                    "acfe_flexible_render_style": false,
-                    "acfe_flexible_render_script": false,
-                    "acfe_flexible_thumbnail": false,
-                    "acfe_flexible_settings": false,
-                    "acfe_flexible_settings_size": false,
-                    "acfe_flexible_modal_edit_size": false,
-                    "acfe_flexible_category": false,
-                    "sub_fields": [
-                        {
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "key": "field_cta_title",
-                            "label": "Titel",
-                            "name": "title"
-                        },
-                        {
-                            "aria-label": "",
-                            "type": "textarea",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "rows": 3,
-                            "default_value": "",
-                            "new_lines": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "acfe_textarea_code": 0,
-                            "key": "field_cta_text",
-                            "label": "Tekst",
-                            "name": "text"
-                        },
-                        {
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "key": "field_cta_btn",
-                            "label": "Knoptekst",
-                            "name": "button_text"
-                        },
-                        {
-                            "aria-label": "",
-                            "type": "url",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "key": "field_cta_url",
-                            "label": "Knop link",
-                            "name": "url"
-                        }
-                    ]
-                },
-                {
-                    "key": "layout_spacer",
-                    "name": "spacer",
-                    "label": "Spatie\/lege ruimte",
-                    "display": "block",
-                    "min": "",
-                    "max": "",
-                    "acfe_flexible_render_template": false,
-                    "acfe_flexible_render_style": false,
-                    "acfe_flexible_render_script": false,
-                    "acfe_flexible_thumbnail": false,
-                    "acfe_flexible_settings": false,
-                    "acfe_flexible_settings_size": false,
-                    "acfe_flexible_modal_edit_size": false,
-                    "acfe_flexible_category": false,
-                    "sub_fields": [
-                        {
-                            "aria-label": "",
-                            "type": "number",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": 40,
-                            "min": 0,
-                            "max": 200,
-                            "step": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "key": "field_spacer_height",
-                            "label": "Hoogte (px)",
-                            "name": "height"
-                        }
-                    ]
-                },
-                {
-                    "key": "layout_image_text",
-                    "name": "image_text",
-                    "label": "Afbeelding + tekst",
-                    "display": "block",
-                    "min": "",
-                    "max": "",
-                    "acfe_flexible_render_template": false,
-                    "acfe_flexible_render_style": false,
-                    "acfe_flexible_render_script": false,
-                    "acfe_flexible_thumbnail": false,
-                    "acfe_flexible_settings": false,
-                    "acfe_flexible_settings_size": false,
-                    "acfe_flexible_modal_edit_size": false,
-                    "acfe_flexible_category": false,
-                    "sub_fields": [
-                        {
-                            "aria-label": "",
-                            "type": "image",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array",
-                            "preview_size": "medium",
-                            "library": "all",
-                            "min_width": 0,
-                            "min_height": 0,
-                            "min_size": 0,
-                            "max_width": 0,
-                            "max_height": 0,
-                            "max_size": 0,
-                            "mime_types": "",
-                            "uploader": "",
-                            "acfe_thumbnail": 0,
-                            "key": "field_image_text_image",
-                            "label": "Afbeelding",
-                            "name": "image"
-                        },
-                        {
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "key": "field_image_text_title",
-                            "label": "Titel",
-                            "name": "title"
-                        },
-                        {
-                            "aria-label": "",
-                            "type": "wysiwyg",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "tabs": "all",
-                            "toolbar": "full",
-                            "media_upload": 1,
-                            "default_value": "",
-                            "delay": 0,
-                            "key": "field_image_text_content",
-                            "label": "Tekst",
-                            "name": "content"
-                        },
-                        {
-                            "aria-label": "",
-                            "type": "select",
-                            "instructions": "",
-                            "required": false,
-                            "conditional_logic": false,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "left": "Links",
-                                "right": "Rechts"
-                            },
-                            "multiple": 0,
-                            "allow_null": 0,
-                            "default_value": false,
-                            "ui": 0,
-                            "ajax": 0,
-                            "placeholder": "",
-                            "return_format": "value",
-                            "create_options": 0,
-                            "save_options": 0,
-                            "allow_custom": 0,
-                            "search_placeholder": "",
-                            "key": "field_image_text_side",
-                            "label": "Afbeelding links of rechts?",
-                            "name": "image_side"
-                        }
-                    ]
+                  "key": "field_hero_benefits_item_text",
+                  "label": "Tekst",
+                  "name": "text",
+                  "type": "text"
                 }
-            ],
-            "min": "",
-            "max": "",
-            "acfe_flexible_advanced": false,
-            "acfe_flexible_stylised_button": false,
-            "acfe_flexible_hide_empty_message": false,
-            "acfe_flexible_empty_message": "",
-            "acfe_flexible_layouts_templates": false,
-            "acfe_flexible_layouts_previews": false,
-            "acfe_flexible_layouts_placeholder": false,
-            "acfe_flexible_layouts_thumbnails": false,
-            "acfe_flexible_modal_settings": {
-                "acfe_flexible_modal_settings_enabled": false,
-                "acfe_flexible_modal_settings_size": "large",
-                "acfe_flexible_modal_settings_close": true,
-                "acfe_flexible_modal_settings_close_label": ""
+              ]
             },
-            "acfe_flexible_async": [],
-            "acfe_flexible_add_actions": [],
-            "acfe_flexible_close_button_label": "",
-            "acfe_flexible_remove_button": [],
-            "acfe_flexible_remove_top_actions": [],
-            "acfe_flexible_layouts_state": false,
-            "acfe_flexible_modal_edit": {
-                "acfe_flexible_modal_edit_enabled": false,
-                "acfe_flexible_modal_edit_size": "large"
+            {
+              "key": "field_hero_weekdeal_heading",
+              "label": "--- Rechts: Weekdeal ---",
+              "name": "",
+              "type": "tab"
             },
-            "acfe_flexible_modal": {
-                "acfe_flexible_modal_enabled": false,
-                "acfe_flexible_modal_title": false,
-                "acfe_flexible_modal_size": "xlarge",
-                "acfe_flexible_modal_col": "4",
-                "acfe_flexible_modal_categories": false
+            {
+              "key": "field_hero_weekdeal_title",
+              "label": "Titel",
+              "name": "weekdeal_title",
+              "type": "text",
+              "default_value": "Weekdeal 🔥"
             },
-            "key": "field_homepage_sections",
-            "label": "Secties",
-            "name": "homepage_sections"
+            {
+              "key": "field_hero_weekdeal_product",
+              "label": "Product",
+              "name": "weekdeal_product",
+              "type": "post_object",
+              "post_type": ["product"],
+              "return_format": "object",
+              "instructions": "Selecteer een product. Naam, prijs, link en afbeelding worden automatisch getoond."
+            },
+            {
+              "key": "field_hero_weekdeal_btn",
+              "label": "Knoptekst",
+              "name": "weekdeal_btn",
+              "type": "text",
+              "default_value": "Aanbieding bekijken"
+            }
+          ]
+        },
+        "layout_categories": {
+          "key": "layout_categories",
+          "name": "categories",
+          "label": "Categorieblokken",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_categories_items",
+              "label": "Blokken",
+              "name": "items",
+              "type": "repeater",
+              "layout": "block",
+              "button_label": "Blok toevoegen",
+              "min": 1,
+              "max": 8,
+              "sub_fields": [
+                {
+                  "key": "field_categories_item_style",
+                  "label": "Stijl",
+                  "name": "style",
+                  "type": "select",
+                  "choices": {
+                    "iphones": "iPhones (donker)",
+                    "ipads": "iPads (lichtblauw)",
+                    "apple": "Apple (roze)",
+                    "deals": "Deals (paars/blauw)"
+                  }
+                },
+                {
+                  "key": "field_categories_item_title",
+                  "label": "Titel",
+                  "name": "title",
+                  "type": "text",
+                  "placeholder": "Bijv. Refurbished iPhones"
+                },
+                {
+                  "key": "field_categories_item_image",
+                  "label": "Afbeelding",
+                  "name": "image",
+                  "type": "image",
+                  "return_format": "array",
+                  "preview_size": "medium"
+                },
+                {
+                  "key": "field_categories_item_btn",
+                  "label": "Knoptekst",
+                  "name": "button_text",
+                  "type": "text",
+                  "placeholder": "Bijv. Aanbod bekijken"
+                },
+                {
+                  "key": "field_categories_item_url",
+                  "label": "Link URL",
+                  "name": "url",
+                  "type": "url",
+                  "placeholder": "https://...",
+                  "instructions": "Laat leeg voor standaard shop/categorie link."
+                }
+              ]
+            }
+          ]
+        },
+        "layout_features": {
+          "key": "layout_features",
+          "name": "features",
+          "label": "Waarom SlimGebruikt",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_features_title",
+              "label": "Sectie titel",
+              "name": "title",
+              "type": "text",
+              "default_value": "Waarom slimgebruikt.nl"
+            },
+            {
+              "key": "field_features_subtitle",
+              "label": "Sectie subtekst",
+              "name": "subtitle",
+              "type": "textarea",
+              "rows": 2,
+              "default_value": "Bij Slimgebruikt.nl koop je refurbished elektronica zonder risico. Je bespaart slim, terwijl je kiest voor kwaliteit en zekerheid."
+            },
+            {
+              "key": "field_features_items",
+              "label": "Blokken",
+              "name": "items",
+              "type": "repeater",
+              "layout": "block",
+              "button_label": "Blok toevoegen",
+              "min": 1,
+              "max": 8,
+              "sub_fields": [
+                {
+                  "key": "field_features_item_icon",
+                  "label": "Icoon",
+                  "name": "icon",
+                  "type": "select",
+                  "choices": {
+                    "shield": "Schild (garantie)",
+                    "check": "Vergrootglas met vinkje",
+                    "truck": "Vrachtwagen",
+                    "gift": "Cadeaubox",
+                    "star": "Ster",
+                    "heart": "Hart",
+                    "clock": "Klok"
+                  }
+                },
+                {
+                  "key": "field_features_item_title",
+                  "label": "Titel",
+                  "name": "title",
+                  "type": "text",
+                  "placeholder": "Bijv. Garantie inbegrepen"
+                },
+                {
+                  "key": "field_features_item_text",
+                  "label": "Tekst",
+                  "name": "text",
+                  "type": "textarea",
+                  "rows": 3,
+                  "placeholder": "Beschrijving van dit voordeel..."
+                }
+              ]
+            }
+          ]
+        },
+        "layout_bestsellers": {
+          "key": "layout_bestsellers",
+          "name": "bestsellers",
+          "label": "Bestsellers",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_bestsellers_title",
+              "label": "Titel",
+              "name": "title",
+              "type": "text",
+              "default_value": "Bestsellers"
+            }
+          ]
+        },
+        "layout_products": {
+          "key": "layout_products",
+          "name": "products",
+          "label": "Producten (Refurbished iPhones)",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_products_title",
+              "label": "Titel",
+              "name": "title",
+              "type": "text",
+              "default_value": "Refurbished iPhones"
+            },
+            {
+              "key": "field_products_link_text",
+              "label": "Link tekst",
+              "name": "link_text",
+              "type": "text",
+              "default_value": "bekijk alle iphones"
+            }
+          ]
+        },
+        "layout_wysiwyg": {
+          "key": "layout_wysiwyg",
+          "name": "wysiwyg",
+          "label": "Vrije tekst (WYSIWYG)",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_wysiwyg_content",
+              "label": "Inhoud",
+              "name": "content",
+              "type": "wysiwyg",
+              "tabs": "all",
+              "toolbar": "full",
+              "media_upload": 1,
+              "delay": 0
+            }
+          ]
+        },
+        "layout_cta": {
+          "key": "layout_cta",
+          "name": "cta",
+          "label": "Call-to-action blok",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_cta_title",
+              "label": "Titel",
+              "name": "title",
+              "type": "text"
+            },
+            {
+              "key": "field_cta_text",
+              "label": "Tekst",
+              "name": "text",
+              "type": "textarea",
+              "rows": 3
+            },
+            {
+              "key": "field_cta_btn",
+              "label": "Knoptekst",
+              "name": "button_text",
+              "type": "text"
+            },
+            {
+              "key": "field_cta_url",
+              "label": "Knop link",
+              "name": "url",
+              "type": "url"
+            }
+          ]
+        },
+        "layout_spacer": {
+          "key": "layout_spacer",
+          "name": "spacer",
+          "label": "Spatie/lege ruimte",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_spacer_height",
+              "label": "Hoogte (px)",
+              "name": "height",
+              "type": "number",
+              "default_value": 40,
+              "min": 0,
+              "max": 200
+            }
+          ]
+        },
+        "layout_image_text": {
+          "key": "layout_image_text",
+          "name": "image_text",
+          "label": "Afbeelding + tekst",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_image_text_image",
+              "label": "Afbeelding",
+              "name": "image",
+              "type": "image",
+              "return_format": "array"
+            },
+            {
+              "key": "field_image_text_title",
+              "label": "Titel",
+              "name": "title",
+              "type": "text"
+            },
+            {
+              "key": "field_image_text_content",
+              "label": "Tekst",
+              "name": "content",
+              "type": "wysiwyg"
+            },
+            {
+              "key": "field_image_text_side",
+              "label": "Afbeelding links of rechts?",
+              "name": "image_side",
+              "type": "select",
+              "choices": { "left": "Links", "right": "Rechts" }
+            }
+          ]
         }
-    ]
+      },
+      "min": "",
+      "max": ""
+    }
+  ],
+  "location": [
+    [{ "param": "page_type", "operator": "==", "value": "front_page" }]
+  ],
+  "menu_order": -1,
+  "position": "normal",
+  "modified": 1739782800
 }
