@@ -149,28 +149,59 @@
 
 // Proceed to checkout button
 .wc-block-cart__submit-button {
-  background-color: $color__dark-blue;
+  display: inline-block;
+  padding: 0.6em 1.6em;
+  border-radius: 10px;
+  background: $color__dark-blue;
   color: $color__white;
-  border: none;
-  border-radius: 8px;
-  padding: 0.875em 1.5em;
-  font-family: $font__main;
-  font-size: 1rem;
+  font-family: $font__heading;
+  font-size: 0.85rem;
   font-weight: 600;
+  text-decoration: none;
+  border: none;
   cursor: pointer;
-  transition:
-    background-color 0.2s ease,
-    transform 0.15s ease;
+  transition: opacity 0.2s ease;
   width: 100%;
   text-align: center;
 
   &:hover,
   &:focus {
-    background-color: darken($color__dark-blue, 8%);
+    opacity: 0.88;
+    border-color: $color__dark-blue;
     color: $color__white;
   }
+}
 
-  &:active {
-    transform: scale(0.98);
+// Continue shopping button / Proceed button styling
+.wc-block-cart__continue-shopping,
+.wc-block-cart__proceed-to-checkout,
+.woocommerce .button {
+  display: inline-block;
+  padding: 0.6em 1.6em;
+  border-radius: 10px;
+  background: $color__dark-blue;
+  color: $color__white;
+  font-family: $font__heading;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.88;
+    border-color: $color__dark-blue;
+    color: $color__white;
+  }
+}
+
+// Alternative button style (secondary)
+.wc-block-cart__proceed-to-checkout--secondary {
+  background: $color__offwhite;
+  color: $color__black;
+
+  &:hover {
+    opacity: 0.88;
   }
 }
