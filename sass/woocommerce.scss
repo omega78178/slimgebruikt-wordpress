@@ -38,6 +38,11 @@ $woocommerce__color-info: #4BC9F1;
 @import "plugins/woocommerce/checkout";
 
 /**
+ * My Account
+ */
+@import "plugins/woocommerce/myaccount";
+
+/**
  * General WooCommerce components
  */
 @import "plugins/woocommerce/components";

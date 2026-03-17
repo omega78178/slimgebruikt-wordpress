@@ -1,0 +1,42 @@
+{
+    "key": "group_product_category",
+    "title": "Categorie instellingen",
+    "fields": [
+        {
+            "key": "field_cat_hero_title",
+            "label": "Hero titel",
+            "name": "cat_hero_title",
+            "type": "text",
+            "instructions": "Titel boven de categoriepagina (bijv. 'Refurbished iPhone'). Laat leeg voor de standaard categorienaam.",
+            "required": 0,
+            "placeholder": "Bijv. Refurbished iPhone"
+        },
+        {
+            "key": "field_cat_hero_text",
+            "label": "Hero tekst",
+            "name": "cat_hero_text",
+            "type": "textarea",
+            "instructions": "Beschrijvende tekst onder de titel. Laat leeg voor de standaardtekst.",
+            "required": 0,
+            "rows": 3,
+            "new_lines": "br"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "product_cat"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "active": true,
+    "show_in_rest": 0,
+    "modified": 1740700000
+}

@@ -1,0 +1,189 @@
+{
+    "key": "group_help_contact",
+    "title": "Hulp & Contact",
+    "fields": [
+        {
+            "key": "field_help_hero_tab",
+            "label": "Hero",
+            "name": "",
+            "type": "tab"
+        },
+        {
+            "key": "field_help_hero_title",
+            "label": "Titel",
+            "name": "help_hero_title",
+            "type": "text",
+            "default_value": "Hulp nodig? Wij zijn er voor je.",
+            "instructions": "Grote titel boven aan de pagina."
+        },
+        {
+            "key": "field_help_hero_subtitle",
+            "label": "Ondertitel",
+            "name": "help_hero_subtitle",
+            "type": "text",
+            "default_value": "Heb je een vraag over een product, bestelling of garantie? Ons team helpt je graag verder."
+        },
+        {
+            "key": "field_help_categories_tab",
+            "label": "Categorie\u00ebn",
+            "name": "",
+            "type": "tab"
+        },
+        {
+            "key": "field_help_categories",
+            "label": "Help-categorie\u00ebn",
+            "name": "help_categories",
+            "type": "repeater",
+            "layout": "block",
+            "button_label": "Categorie toevoegen",
+            "instructions": "Categorie\u00ebn zoals Retouren, Contact, Garantie, etc.",
+            "sub_fields": [
+                {
+                    "key": "field_help_cat_title",
+                    "label": "Categorietitel",
+                    "name": "title",
+                    "type": "text",
+                    "required": 1
+                },
+                {
+                    "key": "field_help_cat_article",
+                    "label": "Help-artikel",
+                    "name": "article",
+                    "type": "post_object",
+                    "post_type": ["help_artikel"],
+                    "return_format": "object",
+                    "allow_null": 1,
+                    "instructions": "Leeg laten = wordt automatisch aangemaakt bij opslaan (op basis van de titel). De content van dit artikel is bewerkbaar bij Help Artikelen."
+                },
+                {
+                    "key": "field_help_cat_items",
+                    "label": "Artikelen / links",
+                    "name": "items",
+                    "type": "repeater",
+                    "layout": "table",
+                    "button_label": "Link toevoegen",
+                    "sub_fields": [
+                        {
+                            "key": "field_help_item_article",
+                            "label": "Help-artikel",
+                            "name": "article",
+                            "type": "post_object",
+                            "post_type": ["help_artikel"],
+                            "return_format": "object",
+                            "allow_null": 1,
+                            "instructions": "Selecteer een artikel. Of vul titel + URL in voor externe link."
+                        },
+                        {
+                            "key": "field_help_item_title",
+                            "label": "Titel (bij externe URL)",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "Alleen nodig als je een externe URL gebruikt."
+                        },
+                        {
+                            "key": "field_help_item_url",
+                            "label": "URL (externe link)",
+                            "name": "url",
+                            "type": "url"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "field_help_faq_tab",
+            "label": "FAQ",
+            "name": "",
+            "type": "tab"
+        },
+        {
+            "key": "field_help_faq_title",
+            "label": "FAQ titel",
+            "name": "help_faq_title",
+            "type": "text",
+            "default_value": "Veelgestelde vragen"
+        },
+        {
+            "key": "field_help_faq_intro",
+            "label": "FAQ intro",
+            "name": "help_faq_intro",
+            "type": "text",
+            "default_value": "Heb je twijfels? Geen probleem. Daarom krijg je bij SlimGebruikt altijd garantie, bedenktijd en eerlijke prijzen."
+        },
+        {
+            "key": "field_help_faq_items",
+            "label": "FAQ items",
+            "name": "help_faq_items",
+            "type": "repeater",
+            "layout": "block",
+            "button_label": "Vraag toevoegen",
+            "sub_fields": [
+                {"key": "field_help_faq_q", "label": "Vraag", "name": "question", "type": "text"},
+                {"key": "field_help_faq_a", "label": "Antwoord", "name": "answer", "type": "wysiwyg"}
+            ]
+        },
+        {
+            "key": "field_help_contact_tab",
+            "label": "Contact sectie",
+            "name": "",
+            "type": "tab"
+        },
+        {
+            "key": "field_help_contact_title",
+            "label": "Titel",
+            "name": "help_contact_title",
+            "type": "text",
+            "default_value": "Nog hulp nodig?"
+        },
+        {
+            "key": "field_help_contact_text",
+            "label": "Tekst",
+            "name": "help_contact_text",
+            "type": "wysiwyg",
+            "instructions": "Bijv. uitleg over bestelling-hulp en contactformulier-link."
+        },
+        {
+            "key": "field_help_contact_email",
+            "label": "E-mail (Klantenservice kaart)",
+            "name": "help_contact_email",
+            "type": "email",
+            "default_value": "support@slimgebruikt.nl"
+        },
+        {
+            "key": "field_help_contact_phone",
+            "label": "Telefoon",
+            "name": "help_contact_phone",
+            "type": "text",
+            "default_value": "023 - 3487 89"
+        },
+        {
+            "key": "field_help_contact_hours",
+            "label": "Openingstijden (bijv. Werkdagen 9:00 - 17:00)",
+            "name": "help_contact_hours",
+            "type": "text",
+            "default_value": "Werkdagen 9:00 - 17:00"
+        },
+        {
+            "key": "field_help_orders_url",
+            "label": "URL bestellingen (Hulp krijgen bij bestelling)",
+            "name": "help_orders_url",
+            "type": "url",
+            "instructions": "Link voor de knop 'Hulp krijgen bij een bestelling'. Laat leeg voor WooCommerce Mijn account > Bestellingen."
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "hulp-contact"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "modified": 1739999999
+}

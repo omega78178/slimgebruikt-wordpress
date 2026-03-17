@@ -2,6 +2,8 @@
  * Single product page – SlimGebruikt design
  */
 
+@use "sass:color";
+
 .single-product .site-main {
 	padding: 0 $spacing__page-horizontal 2em;
 }
@@ -198,17 +200,26 @@
 		grid-template-columns: 1fr;
 		gap: 1.5em;
 
-		@media (min-width: $breakpoint-tablet) {
-			grid-template-columns: 200px 1fr;
+		@media (min-width: 48em) {
+			grid-template-columns: 1fr 1.3fr;
 			align-items: start;
+			gap: 50px;
 		}
 	}
 
 	.product-about__image {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 2rem;
+		background: $color__offwhite;
+		border-radius: 15px;
+
 		img {
 			border-radius: 10px;
-			width: 100%;
+			width: 250px;
 			height: auto;
+			object-fit: contain;
 		}
 	}
 
@@ -272,25 +283,34 @@
 	padding-top: 2em;
 	border-top: 1px solid $color__border-input;
 
-	.related.products {
-		> h2 {
-			font-size: clamp(1.25rem, 3vw, 1.5rem);
-			margin-bottom: 1em;
-		}
+	// Full-width slider zoals homepage hero/features
+	.bestsellers-section {
+		margin-left: calc(-1 * $spacing__page-horizontal);
+		margin-right: calc(-1 * $spacing__page-horizontal);
 
-		ul.products {
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-			gap: 1em;
-			list-style: none;
-			margin: 0;
+		@media (max-width: 47.99em) {
+			margin-left: -0.5em;
+			margin-right: -0.5em;
+		}
+	}
+
+	// Wrapper voor swiper (padding hier, niet op .swiper zelf)
+	.vaak-bekeken-swiper-wrap {
+		padding: 2rem;
+		background: $color__offwhite;
+		overflow: visible;
+
+		.vaak-bekeken-swiper {
 			padding: 0;
-
-			@media (min-width: $breakpoint-tablet) {
-				grid-template-columns: repeat(4, 1fr);
-				gap: 1.25em;
-			}
+			width: 100%;
+			min-width: 0; /* flex child kan shrinking */
 		}
+	}
+
+	/* Zorg dat swiper-wrapper flex behoudt (niet grid van ul.products) */
+	.vaak-bekeken-swiper .swiper-wrapper {
+		display: flex !important;
+		flex-wrap: nowrap !important;
 	}
 }
 

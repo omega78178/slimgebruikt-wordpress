@@ -1,0 +1,78 @@
+.error-404 {
+	min-height: 60vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 3em 1.5em;
+}
+
+.error-404__inner {
+	max-width: 520px;
+	text-align: center;
+}
+
+.error-404__code {
+	display: block;
+	font-family: $font__heading;
+	font-size: clamp(4rem, 10vw, 7rem);
+	font-weight: 700;
+	line-height: 1;
+	color: $color__dark-blue;
+	opacity: 0.15;
+	margin-bottom: -0.15em;
+}
+
+.error-404__title {
+	font-family: $font__heading;
+	font-size: clamp(1.5rem, 3vw, 2rem);
+	font-weight: 700;
+	color: $color__text-main;
+	margin: 0 0 0.6em;
+}
+
+.error-404__text {
+	font-size: 1rem;
+	line-height: 1.65;
+	color: rgba($color__text-main, 0.65);
+	margin: 0 0 2em;
+}
+
+.error-404__actions {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75em;
+	align-items: center;
+
+	.search-form {
+		width: 100%;
+		max-width: 360px;
+	}
+}
+
+.error-404__btn {
+	display: inline-block;
+	padding: 0.7em 2em;
+	border-radius: 8px;
+	font-family: $font__heading;
+	font-size: 0.9rem;
+	font-weight: 600;
+	text-decoration: none;
+	background: $color__dark-blue;
+	color: $color__white;
+	transition: opacity 0.2s;
+
+	&:hover {
+		opacity: 0.85;
+	}
+
+	&--outline {
+		background: transparent;
+		color: $color__dark-blue;
+		border: 1.5px solid $color__dark-blue;
+
+		&:hover {
+			background: rgba($color__dark-blue, 0.05);
+			opacity: 1;
+		}
+	}
+}

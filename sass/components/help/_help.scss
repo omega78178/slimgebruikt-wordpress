@@ -1,0 +1,455 @@
+/**
+ * Hulp & Contact pagina – Back Market-achtig overzicht
+ */
+
+.site-main--hulp {
+	padding-top: 0;
+}
+
+.help-hero {
+	text-align: center;
+	padding: 2.5em $spacing__page-horizontal 2em;
+	margin-bottom: 1em;
+	background: $color__white;
+	border-radius: 15px;
+
+	@media (min-width: 48em) {
+		padding: 3em 2em;
+		margin-bottom: 2em;
+	}
+}
+
+.help-hero__title {
+	margin: 0 0 0.5em;
+	font-family: $font__heading;
+	font-size: clamp(2rem, 5vw, 3.5rem);
+	font-weight: 700;
+	color: $color__text-main;
+}
+
+.help-hero__subtitle {
+	margin: 0;
+	font-size: 1.2rem;
+	color: $color__text-main;
+	opacity: 0.9;
+}
+
+/* Service cards (Klantenservice, Mijn pagina's, Retourneren) */
+.help-service-cards {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1.25em;
+	margin: 2em 0 1.5em;
+
+	@media (min-width: 36em) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+.help-service-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 1.75em 1.25em;
+	background: $color__white;
+	border-radius: 15px;
+	border: 1px solid rgba(0, 0, 0, 0.06);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.help-service-card__icon {
+	width: 48px;
+	height: 48px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 1em;
+	color: $color__dark-blue;
+}
+
+.help-service-card__title {
+	margin: 0 0 0.5em;
+	font-family: $font__heading;
+	font-size: 1.1rem;
+	font-weight: 600;
+	color: $color__text-main;
+}
+
+.help-service-card__content {
+	margin: 0 0 1em;
+	font-size: 0.9rem;
+	line-height: 1.5;
+	color: $color__text-main;
+	opacity: 0.9;
+
+	p { margin: 0 0 0.5em; }
+	p:last-child { margin-bottom: 0; }
+	a { color: $color__dark-blue; text-decoration: none; }
+	a:hover { text-decoration: underline; }
+}
+
+.help-service-card__btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: auto;
+	padding: 0.65em 1.25em;
+	background: $color__dark-blue;
+	color: $color__white !important;
+	font-family: $font__heading;
+	font-weight: 600;
+	font-size: 0.95rem;
+	text-decoration: none;
+	border-radius: 10px;
+	transition: opacity 0.2s;
+
+	&:hover { opacity: 0.9; }
+}
+
+.help-categories {
+	margin-bottom: 3em;
+}
+
+.help-categories__title {
+	margin: 0 0 1.5em;
+	font-family: $font__heading;
+	font-size: clamp(1.25rem, 3vw, 1.75rem);
+	font-weight: 600;
+	color: $color__text-main;
+}
+
+.help-categories__grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1em;
+
+	@media (min-width: 30em) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media (min-width: 48em) {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.25em;
+	}
+
+	@media (min-width: 64em) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+.help-card {
+	display: block;
+	padding: 1.5em;
+	background: $color__white;
+	border-radius: 15px;
+	border: 1px solid rgba(0, 0, 0, 0.06);
+	text-decoration: none;
+	color: inherit;
+	transition: border-color 0.2s, box-shadow 0.2s;
+
+	&:hover {
+		border-color: $color__light-blue;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+	}
+
+	&--no-link {
+		cursor: default;
+
+		&:hover {
+			border-color: rgba(0, 0, 0, 0.06);
+			box-shadow: none;
+		}
+	}
+}
+
+.help-card__icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 48px;
+	height: 48px;
+	margin-bottom: 1em;
+	background: rgba(0, 0, 0, 0.06);
+	border-radius: 50%;
+	font-family: $font__heading;
+	font-size: 1.25rem;
+	font-weight: 600;
+	color: $color__text-main;
+}
+
+.help-card__title {
+	margin: 0;
+	font-family: $font__heading;
+	font-size: 1rem;
+	font-weight: 600;
+	color: $color__text-main;
+}
+
+.help-info-cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1.5em;
+	margin-top: 2em;
+	padding-top: 1.5em;
+	border-top: 1px solid $color__border-input;
+}
+
+.help-info-card {
+	display: flex;
+	align-items: center;
+	gap: 0.75em;
+	font-size: 0.9rem;
+	color: $color__text-main;
+	opacity: 0.9;
+}
+
+.help-info-card__icon {
+	flex-shrink: 0;
+	color: $color__dark-blue;
+}
+
+.help-card__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	li {
+		margin-bottom: 0.5em;
+		font-size: 0.95rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		a {
+			color: $color__light-blue;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+.help-contact {
+	padding: 2em;
+	background: $color__offwhite;
+	border-radius: 15px;
+
+	@media (min-width: 48em) {
+		padding: 2.5em;
+	}
+}
+
+.help-contact__title {
+	margin: 0 0 1em;
+	font-family: $font__heading;
+	font-size: clamp(1.25rem, 3vw, 1.75rem);
+	font-weight: 600;
+	color: $color__text-main;
+}
+
+.help-contact__text {
+	p, ul, ol {
+		margin: 0 0 1em;
+		line-height: 1.6;
+	}
+
+	p:last-child, ul:last-child, ol:last-child {
+		margin-bottom: 0;
+	}
+
+	a {
+		color: $color__dark-blue;
+		text-decoration: underline;
+
+		&:hover {
+			color: $color__light-blue;
+		}
+	}
+}
+
+/* Single help artikel */
+.help-artikel {
+	padding: 2em 0;
+	background: $color__white;
+	border-radius: 15px;
+	margin-bottom: 2em;
+}
+
+.help-artikel__header {
+	margin-bottom: 1.5em;
+	padding-bottom: 1em;
+	border-bottom: 1px solid $color__border-input;
+}
+
+.help-artikel__title {
+	margin: 0 0 0.5em;
+	font-family: $font__heading;
+	font-size: clamp(1.5rem, 4vw, 2.5rem);
+	font-weight: 700;
+	color: $color__text-main;
+}
+
+.help-artikel__back {
+	display: inline-block;
+	font-size: 0.95rem;
+	color: $color__light-blue;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.help-artikel__content {
+	max-width: 50em;
+
+	p, ul, ol {
+		margin-bottom: 1em;
+		line-height: 1.6;
+	}
+}
+
+/* Help breadcrumbs */
+.help-breadcrumbs {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.35em;
+	margin-bottom: 1em;
+	font-size: 0.9rem;
+	color: $color__text-main;
+	opacity: 0.9;
+}
+
+.help-breadcrumbs__sep {
+	color: rgba(0, 0, 0, 0.4);
+}
+
+.help-breadcrumbs a {
+	color: $color__light-blue;
+	text-decoration: none;
+
+	&:hover { text-decoration: underline; }
+}
+
+/* Help gerelateerde artikelen */
+.help-related {
+	margin-top: 2.5em;
+	padding-top: 1.5em;
+	border-top: 1px solid $color__border-input;
+}
+
+.help-related__title {
+	margin: 0 0 1em;
+	font-family: $font__heading;
+	font-size: 1.25rem;
+	font-weight: 600;
+	color: $color__text-main;
+}
+
+.help-related__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	li { margin-bottom: 0.5em; }
+
+	a {
+		color: $color__light-blue;
+		text-decoration: none;
+
+		&:hover { text-decoration: underline; }
+	}
+}
+
+/* Help FAQ (Back Market stijl) */
+.help-faq {
+	margin: 2em 0;
+	padding: 2em;
+	background: $color__white;
+	border-radius: 15px;
+	border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.help-faq__title {
+	margin: 0 0 0.5em;
+	font-family: $font__heading;
+	font-size: clamp(1.25rem, 3vw, 1.75rem);
+	font-weight: 600;
+	color: $color__text-main;
+}
+
+.help-faq__intro {
+	margin: 0 0 1.5em;
+	font-size: 0.95rem;
+	color: $color__text-main;
+	opacity: 0.9;
+}
+
+.help-faq__grid {
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+}
+
+.help-faq__item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	padding: 1em 0;
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid $color__border-input;
+	font-size: 1rem;
+	text-align: left;
+	cursor: pointer;
+	font-family: inherit;
+	color: $color__text-main;
+
+	&:last-of-type { border-bottom: none; }
+}
+
+.help-faq__question {
+	flex: 1;
+	padding-right: 1em;
+	font-weight: 500;
+}
+
+.help-faq__icon {
+	flex-shrink: 0;
+	width: 24px;
+	height: 24px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.25rem;
+	color: $color__light-blue;
+	transition: transform 0.2s;
+}
+
+.help-faq__item[aria-expanded="true"] .help-faq__icon {
+	transform: rotate(45deg);
+}
+
+.help-faq__answer-wrap {
+	overflow: hidden;
+	height: 0;
+}
+
+.help-faq__answer-wrap.is-open {
+	height: auto;
+}
+
+.help-faq__answer {
+	padding: 0 0 1em;
+	font-size: 0.95rem;
+	line-height: 1.6;
+	color: $color__text-main;
+	opacity: 0.9;
+}
