@@ -88,8 +88,10 @@ function slimgebruikt_woocommerce_scripts()
 
 	wp_add_inline_style('slimgebruikt-woocommerce-style', $inline_font);
 
-	if (is_product()) {
-		wp_enqueue_script('wc-add-to-cart-variation'); // Zorg dat variatie-script laadt.
+	if ( is_product() ) {
+		wp_enqueue_script( 'wc-add-to-cart-variation' ); // Zorg dat variatie-script laadt.
+		wp_enqueue_style( 'swiper', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css', array(), '8' );
+		wp_enqueue_script( 'swiper', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js', array(), '8', true );
 		wp_enqueue_script(
 			'slimgebruikt-product-config',
 			get_template_directory_uri() . '/js/product-config.js',
@@ -97,6 +99,7 @@ function slimgebruikt_woocommerce_scripts()
 			_S_VERSION,
 			true
 		);
+		wp_enqueue_script( 'slimgebruikt-bestsellers', get_template_directory_uri() . '/js/bestsellers-swiper.js', array( 'swiper' ), _S_VERSION, true );
 	}
 }
 add_action('wp_enqueue_scripts', 'slimgebruikt_woocommerce_scripts');
@@ -138,8 +141,8 @@ add_filter('body_class', 'slimgebruikt_woocommerce_active_body_class');
 function slimgebruikt_woocommerce_related_products_args($args)
 {
 	$defaults = array(
-		'posts_per_page' => 4,
-		'columns' => 4,
+		'posts_per_page' => 12,
+		'columns'        => 4,
 	);
 
 	$args = wp_parse_args($defaults, $args);

@@ -19,6 +19,11 @@
         {"key": "field_options_gallery_rating", "label": "Sterrenrating (1-5)", "name": "product_gallery_rating", "type": "number", "default_value": 5, "min": 0, "max": 5},
         {"key": "field_options_gallery_trustmark_1", "label": "Trustmark 1", "name": "product_gallery_trustmark_1", "type": "text", "default_value": "Webshop Trustmark"},
         {"key": "field_options_gallery_trustmark_2", "label": "Trustmark 2", "name": "product_gallery_trustmark_2", "type": "text", "default_value": "Webshop Keurmerk"},
+        {"key": "field_options_shop_usps_tab", "label": "Shop sidebar USPs", "name": "", "type": "tab"},
+        {"key": "field_options_shop_usps", "label": "USP-teksten", "name": "shop_sidebar_usps", "type": "repeater", "layout": "table", "button_label": "USP toevoegen", "min": 0, "max": 6, "instructions": "USPs getoond onder de filters op de shoppagina (met icoon).", "sub_fields": [
+            {"key": "field_shop_usp_icon", "label": "Icoon", "name": "icon", "type": "image", "return_format": "array", "preview_size": "thumbnail", "library": "all"},
+            {"key": "field_shop_usp_text", "label": "Tekst", "name": "text", "type": "text"}
+        ]},
         {"key": "field_options_payment_tab", "label": "Betalingsiconen", "name": "", "type": "tab"},
         {"key": "field_options_payment_icons", "label": "Betalingsiconen (productpagina)", "name": "payment_icons", "type": "repeater", "layout": "block", "button_label": "Icoon toevoegen", "instructions": "Toon op productpagina onder de retour-accordion.", "sub_fields": [
             {"key": "field_payment_icon_image", "label": "Afbeelding", "name": "image", "type": "image", "return_format": "array", "preview_size": "thumbnail", "library": "all"},

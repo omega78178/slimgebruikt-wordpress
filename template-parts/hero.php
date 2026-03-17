@@ -63,28 +63,64 @@ if ( empty( $weekdeal_product_name ) ) {
 					<?php echo esc_html( $btn_sec ); ?>
 				</a>
 			</div>
-			<form class="hero__search" action="<?php echo esc_url( $shop_url ); ?>" method="get">
-				<select class="hero__select" name="filter_merk" aria-label="<?php esc_attr_e( 'Merken', 'slimgebruikt' ); ?>">
-					<option value=""><?php esc_html_e( 'Merken', 'slimgebruikt' ); ?></option>
-					<option value="apple">Apple</option>
-					<option value="samsung">Samsung</option>
-					<option value="google">Google</option>
+			<?php
+			$parent_cats = get_terms( array(
+				'taxonomy'   => 'product_cat',
+				'hide_empty' => true,
+				'parent'     => 0,
+				'exclude'    => array( get_option( 'default_product_cat' ) ),
+				'orderby'    => 'name',
+			) );
+			$cat_tree     = array();
+			$has_children = false;
+			if ( ! is_wp_error( $parent_cats ) ) {
+				foreach ( $parent_cats as $pc ) {
+					$children = get_terms( array(
+						'taxonomy'   => 'product_cat',
+						'hide_empty' => true,
+						'parent'     => $pc->term_id,
+						'orderby'    => 'name',
+					) );
+					$kids = ( ! is_wp_error( $children ) && $children )
+						? array_map( function( $c ) { return array( 'slug' => $c->slug, 'name' => $c->name ); }, $children )
+						: array();
+					if ( $kids ) {
+						$has_children = true;
+					}
+					$cat_tree[] = array(
+						'slug'     => $pc->slug,
+						'name'     => $pc->name,
+						'children' => $kids,
+					);
+				}
+			}
+			$storage_terms = get_terms( array( 'taxonomy' => 'pa_opslagruimte', 'hide_empty' => true, 'orderby' => 'name' ) );
+			$color_terms   = get_terms( array( 'taxonomy' => 'pa_kleur', 'hide_empty' => true, 'orderby' => 'name' ) );
+		?>
+			<form class="hero__search" action="<?php echo esc_url( $shop_url ); ?>" method="get"
+				data-categories="<?php echo esc_attr( wp_json_encode( $cat_tree ) ); ?>">
+				<select class="hero__select" name="hero_merk" id="hero-merk" aria-label="<?php esc_attr_e( 'Merk', 'slimgebruikt' ); ?>">
+					<option value=""><?php esc_html_e( 'Merk', 'slimgebruikt' ); ?></option>
+					<?php foreach ( $cat_tree as $cat ) : ?>
+						<option value="<?php echo esc_attr( $cat['slug'] ); ?>"><?php echo esc_html( $cat['name'] ); ?></option>
+					<?php endforeach; ?>
 				</select>
-				<select class="hero__select" name="filter_model" aria-label="<?php esc_attr_e( 'Model', 'slimgebruikt' ); ?>">
+				<?php if ( $has_children ) : ?>
+				<select class="hero__select" name="hero_model" id="hero-model" aria-label="<?php esc_attr_e( 'Model', 'slimgebruikt' ); ?>" disabled>
 					<option value=""><?php esc_html_e( 'Model', 'slimgebruikt' ); ?></option>
 				</select>
-				<select class="hero__select" name="filter_opslag" aria-label="<?php esc_attr_e( 'Opslag', 'slimgebruikt' ); ?>">
+				<?php endif; ?>
+				<select class="hero__select" name="hero_opslag" id="hero-opslag" aria-label="<?php esc_attr_e( 'Opslag', 'slimgebruikt' ); ?>">
 					<option value=""><?php esc_html_e( 'Opslag', 'slimgebruikt' ); ?></option>
-					<option value="64">64 GB</option>
-					<option value="128">128 GB</option>
-					<option value="256">256 GB</option>
-					<option value="512">512 GB</option>
+					<?php if ( ! is_wp_error( $storage_terms ) ) : foreach ( $storage_terms as $t ) : ?>
+						<option value="<?php echo esc_attr( $t->slug ); ?>"><?php echo esc_html( $t->name ); ?></option>
+					<?php endforeach; endif; ?>
 				</select>
-				<select class="hero__select" name="filter_kleur" aria-label="<?php esc_attr_e( 'Kleur', 'slimgebruikt' ); ?>">
+				<select class="hero__select" name="hero_kleur" id="hero-kleur" aria-label="<?php esc_attr_e( 'Kleur', 'slimgebruikt' ); ?>">
 					<option value=""><?php esc_html_e( 'Kleur', 'slimgebruikt' ); ?></option>
-					<option value="zwart">Zwart</option>
-					<option value="wit">Wit</option>
-					<option value="blauw">Blauw</option>
+					<?php if ( ! is_wp_error( $color_terms ) ) : foreach ( $color_terms as $t ) : ?>
+						<option value="<?php echo esc_attr( $t->slug ); ?>"><?php echo esc_html( $t->name ); ?></option>
+					<?php endforeach; endif; ?>
 				</select>
 				<button type="submit" class="hero__search-btn">
 					<?php esc_html_e( 'Zoeken', 'slimgebruikt' ); ?>

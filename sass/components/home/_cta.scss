@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .home-cta {
 	padding: 2em 0;
 	text-align: center;
@@ -35,6 +37,6 @@
 	text-decoration: none;
 
 	&:hover {
-		background: darken($color__dark-blue, 5%);
+		background: color.adjust($color__dark-blue, $lightness: -5%);
 	}
 }

@@ -3,6 +3,8 @@
  * Witte kaart, afbeelding, titel, prijs + pijlkop, vergelijken-knop
  */
 
+@use "sass:color";
+
 .product-badge {
 	position: absolute;
 	top: 0.5em;
@@ -251,7 +253,8 @@
 	}
 }
 
-.bestsellers-swiper {
+.bestsellers-swiper,
+.vaak-bekeken-swiper {
 	background: $color__offwhite;
 	border-radius: 15px;
 	padding: 1.5em $spacing__page-horizontal 2em;
@@ -282,6 +285,7 @@
 		}
 	}
 }
+
 
 ul.products {
 	display: grid;
