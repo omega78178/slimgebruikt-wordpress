@@ -177,29 +177,29 @@ function slimgebruikt_scripts()
 	wp_enqueue_script('slimgebruikt-theme', get_template_directory_uri() . '/js/theme.js', array(), $theme_version, true);
 	wp_enqueue_script('slimgebruikt-motion', get_template_directory_uri() . '/js/motion.js', array(), _S_VERSION, true);
 
-	if ( is_front_page() || ( function_exists( 'is_shop' ) && is_shop() ) ) {
-		wp_enqueue_script( 'slimgebruikt-weekdeal-countdown', get_template_directory_uri() . '/js/weekdeal-countdown.js', array(), _S_VERSION, true );
+	if (is_front_page() || (function_exists('is_shop') && is_shop())) {
+		wp_enqueue_script('slimgebruikt-weekdeal-countdown', get_template_directory_uri() . '/js/weekdeal-countdown.js', array(), _S_VERSION, true);
 	}
-	if ( is_front_page() ) {
+	if (is_front_page()) {
 		$hs_js = get_template_directory() . '/js/hero-search.js';
-		wp_enqueue_script( 'slimgebruikt-hero-search', get_template_directory_uri() . '/js/hero-search.js', array(), file_exists( $hs_js ) ? filemtime( $hs_js ) : _S_VERSION, true );
+		wp_enqueue_script('slimgebruikt-hero-search', get_template_directory_uri() . '/js/hero-search.js', array(), file_exists($hs_js) ? filemtime($hs_js) : _S_VERSION, true);
 	}
-	if ( function_exists( 'is_shop' ) && ( is_shop() || is_product_taxonomy() ) ) {
+	if (function_exists('is_shop') && (is_shop() || is_product_taxonomy())) {
 		$sf_js = get_template_directory() . '/js/shop-filters.js';
-		wp_enqueue_script( 'slimgebruikt-shop-filters', get_template_directory_uri() . '/js/shop-filters.js', array(), file_exists( $sf_js ) ? filemtime( $sf_js ) : _S_VERSION, true );
+		wp_enqueue_script('slimgebruikt-shop-filters', get_template_directory_uri() . '/js/shop-filters.js', array(), file_exists($sf_js) ? filemtime($sf_js) : _S_VERSION, true);
 	}
-	if ( ( is_front_page() || is_page_template( 'template-landing.php' ) ) && class_exists( 'WooCommerce' ) ) {
-		wp_enqueue_style( 'swiper', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css', array(), '8' );
-		wp_enqueue_script( 'swiper', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js', array(), '8', true );
-		wp_enqueue_script( 'slimgebruikt-bestsellers', get_template_directory_uri() . '/js/bestsellers-swiper.js', array( 'swiper' ), _S_VERSION, true );
-		wp_enqueue_script( 'slimgebruikt-products-swiper', get_template_directory_uri() . '/js/products-swiper.js', array( 'swiper' ), _S_VERSION, true );
+	if ((is_front_page() || is_page_template('template-landing.php') || is_page_template('page-winkelwagen.php')) && class_exists('WooCommerce')) {
+		wp_enqueue_style('swiper', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css', array(), '8');
+		wp_enqueue_script('swiper', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js', array(), '8', true);
+		wp_enqueue_script('slimgebruikt-bestsellers', get_template_directory_uri() . '/js/bestsellers-swiper.js', array('swiper'), _S_VERSION, true);
+		wp_enqueue_script('slimgebruikt-products-swiper', get_template_directory_uri() . '/js/products-swiper.js', array('swiper'), _S_VERSION, true);
 	}
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');
 	}
 
-	if ( is_page_template( 'page-hulp.php' ) || is_page_template( 'template-landing.php' ) || is_front_page() || is_singular( 'help_artikel' ) ) {
+	if (is_page_template('page-hulp.php') || is_page_template('template-landing.php') || is_front_page() || is_singular('help_artikel')) {
 		$landing_css = get_template_directory() . '/css/landing.css';
 		$landing_ver = file_exists($landing_css) ? filemtime($landing_css) : _S_VERSION;
 		wp_enqueue_style('slimgebruikt-landing', get_template_directory_uri() . '/css/landing.css', array('slimgebruikt-style'), $landing_ver);
@@ -280,11 +280,11 @@ add_action('init', function () {
 		);
 		acf_add_options_page(
 			array(
-				'page_title' => __( 'Hulp & Contact', 'slimgebruikt' ),
-				'menu_title' => __( 'Hulp & Contact', 'slimgebruikt' ),
-				'menu_slug'  => 'hulp-contact',
+				'page_title' => __('Hulp & Contact', 'slimgebruikt'),
+				'menu_title' => __('Hulp & Contact', 'slimgebruikt'),
+				'menu_slug' => 'hulp-contact',
 				'capability' => 'edit_posts',
-				'redirect'   => false,
+				'redirect' => false,
 			)
 		);
 	}
